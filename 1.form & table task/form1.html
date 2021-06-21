@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My form</title>
+    <link rel="stylesheet" href="formcss.css">
+</head>
+<body>
+    <form action="">
+        <table >
+            
+            <tr><td colspan="3" ><b> Personal information</b></td></tr>
+            <tr>
+                <td  ><label for="fname" >First Name:</label></td>
+                <td >
+                    <input type="text" name="fname"  autofocus="True" required title="plese enter your first name">
+                </td>
+            </tr>
+            <tr>
+                <td  ><label for="lname">Last Name:</label></td>
+                <td >
+                    <input type="text" id="lname" >
+                </td>
+            </tr>
+            <tr>
+                <td><label for="db">date of birth:</label></td>
+                <td>
+                    <select name="select" id="db">
+                        <option value="">month</option>
+                        <option value="">jan</option>
+                    </select>
+                    <select name="select" id="db">
+                        <option value="">day</option>
+                        <option value="">day</option>
+                    </select>
+                    <select name="select" id="db">
+                        <option value="">year</option>
+                        <option value="">day</option>
+                    </select>
+                    
+                </td>
+                <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td id="ge" >
+                        <select name="gender" id="gender" >
+                            <option value="">chose a gender </option>
+                            <option value="" >male </option>
+                            <option value="" >female </option>
+
+                        </select>
+                    </td>
+                </tr>
+                
+            </tr>
+            <tr><td><br> </td>
+           
+            <tr><td><b>Account Information</b></td></tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" name="email" id="email" title="your email is to your user name"></td>
+            </tr>
+            <tr>
+                <td><label for="reemail">Re-Type Email:</label></td>
+                <td><input type="email" id="reemail"></td>
+            </tr>
+            <tr>
+                <td><label for="pass"></label>Password:</td>
+                <td><input  type="password" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="atlist one number,upercae and lovercase latter ,atlist 8 or more char"></td>
+            </tr>
+            <tr>
+                <td><label for="repass">Re-type password:</label></td>
+                <td><input type="password" id="repass" name="repass"></td>
+            </tr>
+            <tr>
+                <td><label for="secuop">Security Qustion</label></td>
+                <td><select name="secuop" id="secuop">
+                    <option value="" >choose a security Qustion</option>
+                </select></td>                
+            </tr>
+            <tr>
+                <td><label for="seans">Security ans</label></td>
+                <td><input type="text" id="seans" title="Not case sensitiv"></td>
+            </tr>
+            <tr><td><br> </td>
+           
+            <tr><td><b>Contact Information</b></td>
+            </tr>
+            <tr>
+                <td><label for="add">Address:</label></td>
+                <td><input type="text" name="add" id="add" ></td>
+            </tr>
+            <tr>
+                <td><label for="city">City:</label></td>
+                <td><input type="text" id="city" name="city"></td>
+            </tr>
+            <tr>
+                <td><label for="state">State</label></td>
+                <td><select name="state" id="state">
+                    <option value="">Choose state</option>
+                
+                </select></td>
+                
+            </tr>
+            <tr>
+                <td><label for="zip">Zip code:</label></td>
+                <td><input type="text" name="zip" id="zip" pattern="[0-9]{3}-[0-9]{3}" title="enter in this formate  123-456">
+                <input type="text" placeholder="optional" disabled></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone:</label></td>
+                <td><input type="number" name="phone" id="phone" title="no space or dase" pattern="[0-9]{10}" placeholder="XXXXXXXXXX">
+                    <select name="" id="phone">
+                        <option value="">mobail</option>
+                        <option value="">samsung</option>
+                    </select></td></td>
+                
+            </tr>
+            
+
+                
+            
+        </table>
+        
+    
+    </form>
+    <a href="table.html">table </a>
+</body>
+</html>
