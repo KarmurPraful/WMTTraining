@@ -1,0 +1,361 @@
+@media only screen and (min-width:0) and (max-width:776px) {
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background-image: url("/Images/background.jpg");
+        
+    }
+    
+    nav{
+        background-color: rgb(233, 220, 220);
+        border: 2px solid black;
+        border-radius: 4px;
+        height: 80px;
+    }
+    ul.list li{
+        display: inline;
+        font-size: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-left: 10px;
+        padding: 4px;
+        color: black;
+        background-color: rgb(231, 243, 243);
+        
+        
+    }
+    ul li a{
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+    
+    ul.list li:hover{
+        display: inline-block;
+        font-size: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-left: 10px;
+        padding: 2px;
+        background-color: burlywood;
+        transition: 1s;
+        border: 2px dotted red;    
+    }
+    ul li:active{
+        display: inline-block;
+        font-size: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-left: 10px;
+        padding: 2px;
+        background-color: burlywood;
+        transition: 1s;
+        border: 2px dotted red;    
+    }
+    
+    
+    
+    /* content part */
+    .main{
+        margin-top: 2px;
+     
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr ;
+        grid-gap:3px
+    }
+    
+    /* aside part */
+    .item1{
+        background-color: rgb(211, 236, 236);
+        border:2px solid #000000;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        
+    
+    }
+    .links{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items:flex-start;
+        
+        height: 50%;
+    }
+    
+    ul.list1 li{
+    
+        font-size: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-left: 10px;
+        padding: 2px;
+        
+    }
+    ul.list1{
+        display: block;
+        
+    }
+    .items1{
+        margin: 10px;
+    }
+    .items2{
+        margin: 10px;
+    }
+    .items3{
+        margin: 10px;
+    }
+    
+    
+    .img{
+        background-color: blanchedalmond;
+        flex-grow: 1;
+    }
+    
+    
+    /* main part */
+    .item2{
+         background-color: rgb(221, 241, 206);
+         grid-column: 2/-1;
+         border:2px solid black;
+         border-radius: 7px;
+         display: grid;
+         overflow: hidden;
+         grid-template-columns: 1fr;
+         grid-template-rows:1fr;
+         
+         
+    }
+    .it1{
+     background-color: rgb(218, 215, 211);
+     margin: 10px;
+     border-radius: 7px;
+    }
+    .it2{
+        background-color: rgb(164, 152, 133);
+        margin: 10px;
+        border-radius: 7px;
+    }
+    .it3{
+        background-color: rgb(174, 170, 164);
+        margin: 10px;
+        border-radius: 7px;
+    }
+    .im1,.im2,.im3{
+    
+        height: 100%;
+        overflow:hidden ;
+    }
+    img{
+        width: 100%;
+       
+    
+    }
+    .im1,.im2,.im3 p{
+        font-size: 20px;
+    
+    }
+    
+    
+    
+    
+    /* footer */
+    footer{
+        margin-top: 2px;
+        height: 80px;
+        background-color: rgb(233, 220, 220);
+        border: 2px solid black;
+        border-radius: 4px;
+    }
+    
+}
+
+
+
+@media screen and (min-width:776px) {
+ *{
+    box-sizing: border-box;
+}
+body{
+    background-image: url("/Images/background.jpg");
+    
+}
+
+nav{
+    background-color: rgb(233, 220, 220);
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 80px;
+}
+nav:hover{
+    background-color: rgb(185, 185, 221);
+    transition: 4s;
+}
+ul.list li{
+    display: inline-block;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 8px;
+    color: black;
+    background-color: rgb(231, 243, 243);
+    
+    
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+ul.list li:hover{
+    display: inline-block;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 2px;
+    background-color: burlywood;
+    transition: 1s;
+    border: 2px dotted red;    
+}
+ul li:active{
+    display: inline-block;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 2px;
+    background-color: burlywood;
+    transition: 1s;
+    border: 2px dotted red;    
+}
+
+
+
+/* content part */
+.main{
+    margin-top: 2px;
+    display: grid;
+    grid-template-columns: 1fr 5fr ;
+    grid-template-rows: 1fr ;
+    grid-gap:3px
+}
+
+/* aside part */
+.item1{
+    background-color: rgb(211, 236, 236);
+    border:2px solid #000000;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.links{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items:flex-start;
+    
+    height: 50%;
+}
+
+ul.list1 li{
+
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 2px;
+    
+}
+ul.list1{
+    display: block;
+    
+}
+.items1{
+    margin: 10px;
+}
+.items2{
+    margin: 10px;
+}
+.items3{
+    margin: 10px;
+}
+
+
+.img{
+    background-color: blanchedalmond;
+    flex-grow: 1;
+}
+
+
+/* main part */
+.item2{
+     background-color: rgb(221, 241, 206);
+     grid-column: 2/-1;
+     border:2px solid black;
+     border-radius: 7px;
+     display: grid;
+     overflow: hidden;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows:1fr;
+     
+     
+}
+.it1{
+ background-color: rgb(218, 215, 211);
+ margin: 10px;
+ border-radius: 7px;
+}
+.it2{
+    background-color: rgb(164, 152, 133);
+    margin: 10px;
+    border-radius: 7px;
+}
+.it3{
+    background-color: rgb(174, 170, 164);
+    margin: 10px;
+    border-radius: 7px;
+}
+.im1,.im2,.im3{
+
+    height: 100%;
+    overflow:hidden ;
+}
+img{
+    width: 100%;
+   
+
+}
+.im1,.im2,.im3 p{
+    font-size: 20px;
+
+}
+
+
+
+
+/* footer */
+footer{
+    margin-top: 2px;
+    height: 80px;
+    background-color: rgb(233, 220, 220);
+    border: 2px solid black;
+    border-radius: 4px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
