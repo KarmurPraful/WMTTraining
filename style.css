@@ -187,41 +187,44 @@ nav{
     border: 2px solid black;
     border-radius: 4px;
     height: 80px;
+   
+    
 }
 nav:hover{
     background-color: rgb(185, 185, 221);
     transition: 4s;
 }
-ul.list li{
+
+.list li{
     display: inline-block;
     font-size: 20px;
-    border: 2px solid black;
+    margin: 0;
     border-radius: 5px;
-    margin-left: 10px;
+    
     padding: 8px;
     color: black;
-    background-color: rgb(231, 243, 243);
+    background-color: transparent;
     
     
 }
-ul li a{
+.list li a{
     text-decoration: none;
     color: black;
     padding: 10px;
 }
 
-ul.list li:hover{
+.list li:hover{
     display: inline-block;
-    font-size: 20px;
-    border: 2px solid black;
+  
+    
     border-radius: 5px;
-    margin-left: 10px;
-    padding: 2px;
+ 
+    
     background-color: burlywood;
     transition: 1s;
-    border: 2px dotted red;    
+    border-bottom: 2px dotted red;    
 }
-ul li:active{
+.list li:active{
     display: inline-block;
     font-size: 20px;
     border: 2px solid black;
@@ -260,34 +263,28 @@ ul li:active{
     flex-direction: column;
     align-items:flex-start;
     
+    
     height: 50%;
 }
-
-ul.list1 li{
-
-    font-size: 20px;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-left: 10px;
-    padding: 2px;
-    
-}
-ul.list1{
+.link1 a{
     display: block;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.link1 a:hover{
+    display: inline-block;
+  
     
-}
-.items1{
-    margin: 10px;
-}
-.items2{
-    margin: 10px;
-}
-.items3{
-    margin: 10px;
+    border-radius: 5px;
+ 
+    
+    background-color: burlywood;
+    transition: 1s;
+       
 }
 
 
-.img{
+.img1{
     background-color: blanchedalmond;
     flex-grow: 1;
 }
@@ -302,7 +299,7 @@ ul.list1{
      display: grid;
      overflow: hidden;
      grid-template-columns: 1fr 1fr 1fr;
-     grid-template-rows:1fr;
+     grid-template-rows:1fr 1fr;
      
      
 }
@@ -321,6 +318,11 @@ ul.list1{
     margin: 10px;
     border-radius: 7px;
 }
+.it4{
+    background-color: rgb(208, 190, 163);
+    margin: 10px;
+    border-radius: 7px;
+}
 .im1,.im2,.im3{
 
     height: 100%;
@@ -328,8 +330,14 @@ ul.list1{
 }
 img{
     width: 100%;
+    height: 300px;
    
 
+}
+img:hover{
+    height: 320px;
+    transition: 2s;
+    
 }
 .im1,.im2,.im3 p{
     font-size: 20px;

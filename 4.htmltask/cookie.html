@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="email">Email</label>   
+        <input type="email" name="email">   
+        <br>
+        <button type="submit" onclick="setcookies()">setcookies</button>  
+        <button type="button" onclick="getcookies()">getcookies</button>  
+    </form>
+    <script>
+        function setcookies(){
+            document.cookie="name="+document.myform.name.value;
+            document.cookie="email="+document.myform.email.value;
+            
+        }
+        function getcookies(){
+            var valueArray=document.cookie.split(";");
+            
+            for(i of valueArray){
+                var vl=i.split("=")
+               
+                if(vl[0]=='name'){
+                    document.myform.name.value=vl[1]
+                }
+                if(vl[0].trim()=='email'){
+                    document.myform.email.value=vl[1]
+                }
+                
+            }
+            
+            // for(var i=0;i<valueArray.length;i++){
+            //     var vl=valueArray[i].split("=")
+            //     if(vl[0]=='name'){
+            //         document.myform.name.value=vl[1]
+            //     }
+            // }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click the button to get your coordinates.</p>
+
+<button onclick="getGiolocatiob()">Try It</button>
+
+<p id="demo"></p>
+  
+    <div id="root">
+        
+    </div>
+    <script>
+        var x=document.getElementById("root")
+        function getGiolocatiob(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showosition,showerror)
+            }
+        }
+        // function getGiolocatiob() {
+        //     if (navigator.geolocation) {
+        //       navigator.geolocation.watchPosition(showPosition,showerror);
+        //     } else {
+        //       x.innerHTML = "Geolocation is not supported by this browser.";
+        //     }
+        // }
+        function showosition(position){
+            x.innerHTML="Latitude:"+position.coords.latitude
+        }
+        function showerror(error){
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                  x.innerHTML = "denied request for Geolocation."
+                  break;
+                case error.POSITION_UNAVAILABLE:
+                  x.innerHTML = "information not-unavailable."
+                  break;
+                case error.TIMEOUT:
+                  x.innerHTML = "The request to get user location timed out."
+                  break;
+                case error.UNKNOWN_ERROR:
+                  x.innerHTML = "An unknown error occurred."
+                  break;
+                }
+        }
+    </script>
+    <h1>Other html task</h1>
+    <a href="localstorage.html">localstorage</a><br>
+    <a href="svgformate.html">SVG</a><br>
+    <a href="cookie.html">cookie</a><br>
+    <a href="canvas.html">canvas</a><br>
+</body>
+</html>
