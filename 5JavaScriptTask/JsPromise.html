@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button onclick="promis()">Promise</button>
+    <button onclick="promisAll()">promiseAll</button>
+    <button onclick="copmlexcode()">copmlexcode</button>
+</head>
+<body>
+    <script>
+        function promis(){
+            function prom(a,b){
+                return new Promise(function(resolve,reject){
+                console.log("fatching data plese wait")
+                var c = a / b
+                setTimeout(()=>{
+                    if(a,b){
+                    resolve(`your answer : ${c}`)
+                    
+                }else{
+                    reject("Fail to calculate")
+                }
+                },2000)
+                });
+            }
+
+            prom(5,2).then((result)=>{
+                console.log(result)
+            }).catch((error)=>{
+                console.log(error)
+            });
+        }
+
+
+        // promise.all()
+        function promisAll(){
+            let p1=new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log('the first promise has resolved')
+                    resolve(10)
+                },1000)
+            })
+            let p2=new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log('the second promise has failed')
+                    reject("failed")
+                },2000)
+            })
+            let p3=new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log('the third promise has resolved')
+                    resolve(30)
+                },3000)
+            })
+
+
+            var total=0
+            Promise.all([p1,p2,p3]).then((result)=>{
+                for(var i in result){
+                    total+=result[i]
+                    
+                }
+                console.log(`result: ${result}`)
+                console.log("total result is "+total)
+            }).catch((error)=>{
+                console.log(`result: ${error}`)
+            })
+        
+        }
+
+        // copmlex promise code
+        function copmlexcode(){
+            function promisecall(returnData,messsage){
+                return function(resolve,reject){
+                    setTimeout(()=>{
+                        console.log(`the ${messsage} promise has resolved`);
+                        resolve(returnData);
+                    },returnData*100); 
+                }
+            }
+            let p1=new Promise(promisecall(10,"first"));
+            let p2=new Promise(promisecall(20,"second"))
+
+            var total=0
+            Promise.all([p1,p2]).then((result)=>{
+                for(var i in result){
+                    total+=result[i]
+                    
+                }
+                console.log(`result: ${result}`)
+                console.log("total result is "+total)
+            }).catch((error)=>{
+                console.log(`result: ${error}`)
+            })
+        
+        };
+       
+
+    </script>
+</body>
+</html>

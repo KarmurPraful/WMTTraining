@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .pk{
+           background: blueviolet;
+        }
+        .bx1{
+            background: rgb(233, 222, 208);
+            padding: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="bx1">
+    <h1 class="hed1" id="ha1"> Add and remove class</h1>
+    <p id="para1" >this is first div paragraph in this paragraph we appluy some jquery opration</p>
+  
+    <p>this is seconde paragraph we are using replaceAll() methood replace all method at a time</p>
+    </div>
+    <div id="box2" class="bx1">
+        <p>this is seconde div</p>
+    </div>
+    <button id="appbtn">append</button>
+    <button id="prebtn">prepand</button>
+    <button id="aftbtn">after</button>
+    <button id="befbtn">before</button><br><br>
+    <button id="empbtn">Empty</button>
+    <button id="rembtn">Remove</button>
+    <br><br>
+    <button id="clnbtn">clone</button>
+    <br><br>
+    <button id="repbtn">Replace</button>
+    <button id="repAbtn">ReplaceAll</button>
+    <br><br>
+    <button id="wrpbtn">Wrap</button>
+    <button id="uwrpbtn">Unwrap</button>
+    <button id="wrAbtn">wrapAll</button>
+    <button id="wribtn">wrapInner</button>
+    <br><br>
+    <button id="widthbtn">width()</button>
+    <button id="heightbtn">height()</button>
+    <br><br>
+    <button id="innerwidthbtn">innerwidthbtn</button>
+    <button id="outerwidthbtn">outerwidthbtn</button>
+    <button id="innerheightbtn">innerheightbtn</button>
+    <button id="outerheightbtn">outerheightbtn</button>
+    <button id="outerwidthtruebtn">outerwidth(true)</button>
+    <button id="outerheighttruebtn">outerheight(true)</button>
+   
+    <script>
+            // append and Prepand
+        $(document).ready(function(){
+            $("#appbtn").click(function(){
+                $("#box").append("use append in div")
+            })
+
+            $("#prebtn").click(function(){
+                $("#box").prepend("use prepand in div")
+            })
+
+
+            // after and before
+            $("#aftbtn").click(function(){
+                $("#box").after("<h4>after div we add content</h4>")
+            })
+
+            $("#befbtn").click(function(){
+                $("#box").before("<h2>after div we add content</h2>")
+            })
+
+            // empty() and remove()
+            $("#empbtn").click(function(){
+                $("#box").empty()
+            })
+
+            $("#rembtn").click(function(){
+                $("#box").remove()
+            })
+
+
+            // clone() methode
+            $("#clnbtn").click(function(){
+                $("#box h1").clone().prependTo("#box2")
+            })
+
+
+            // ReplaceWith
+            $("#repbtn").click(function(){
+                $("#box p:first").replaceWith("<h3>replace parareph<h3>")
+            })
+
+            // ReplaceAll is not allowed to text node replacement
+            $("#repAbtn").click(function(){
+                $("<h3>replace parareph<h3>").replaceAll("#box p:nth-child(3)")
+            })
+
+
+            // wrap ->in wrap we put one tag(like span tag) into onether tag(like h1)
+            // we are remve outer tag from current tag
+            $("#wrpbtn").click(function(){
+                $("#box p:first").wrap('<b id="bl1">  </b>')
+            })
+            
+            $("#uwrpbtn").click(function(){
+                $("#box p:first").unwrap()
+            })
+
+            // wrapall()->it help to wrap multiplae tag in one tag 
+            $("#wrAbtn").click(function(){
+                $("#box p").wrapAll('<b id="bl1"></b>')
+            })
+            $("#wribtn").click(function(){
+                $("#box p:first").wrapInner('<b id="bl1"></b>')
+            })
+
+            // width
+            // height
+            // innerwidth
+            // outerwidth
+            // innerheight
+            // outerheight
+            // outerwidth(true)
+            // outerheiht(true)
+
+            $("#widthbtn").click(function(){
+                var width=$("#box").width()
+                console.log("width="+width)
+            })
+            $('#heightbtn').click(function(){
+                var height=$("#box").height()
+                console.log("height="+height)
+            })
+            $("#innerwidthbtn").click(function(){
+                var innerwidth=$("#box").innerWidth()
+                console.log("innerwidth="+innerwidth)
+            })
+            $("#outerwidthbtn").click(function(){
+                var outerWidth=$("#box").outerWidth()
+                console.log("innerwidth="+outerWidth)
+            })
+
+            $("#innerheightbtn").click(function(){
+                var innerHeight=$("#box").innerHeight()
+                console.log("innerheight="+innerHeight)
+            })
+            $("#outerheightbtn").click(function(){
+                var outerHeight=$("#box").outerHeight()
+                console.log("outerheight="+outerHeight)
+            })
+
+            $("#outerwidthtruebtn").click(function(){
+                var outerWidthtrue=$("#box").outerWidth(true)
+                console.log("outerwidth(true)="+outerWidthtrue)
+            })
+
+            $("#outerheighttruebtn").click(function(){
+                var outerheighttrue=$("#box").outerHeight(true)
+                console.log("outerheight(true)="+outerheighttrue)
+            })
+            
+        })
+    </script>
+</body>
+</html>

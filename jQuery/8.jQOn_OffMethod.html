@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .pk{
+           background: blueviolet;
+        }
+        .box{
+            background: rgb(233, 222, 208);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <h1 class="hed1" id="ha1"> Add and remove class</h1>
+    <p id="para1" >this is paragraph</p>
+    <button class="addbtn">on button</button>
+    <button class="rembtn">off button</button>
+    <button class="togbtn">toggle class</button>
+    </div>
+    <script>
+        // addClass()
+        // removeClass
+        // toggleClass
+        $(document).ready(function(){
+            
+            $(".addbtn").on({
+                "click":function(){
+                    console.log("mouse click")
+                    $(".box").css("background","red")
+                },
+                "mouseover":function(){
+                    console.log("mouse over")
+                    $(".box").css("background","lightblue")
+                },
+                "mouseleave":function(){
+                    console.log("mouse leave")
+                    $(".box").css("background","")
+                }
+            })
+
+            $(".rembtn").click(function(){
+                $(".addbtn").off("mouseover click")
+                console.log("remove onmouseover and click event")
+            })
+            
+        })
+    </script>
+</body>
+</html>

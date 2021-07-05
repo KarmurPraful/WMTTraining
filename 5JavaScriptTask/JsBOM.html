@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="funresize()">
+    
+    <button onclick="openWindow()">Open window</button>
+    <br>
+    <button onclick="closeWindow()">close window</button>
+    <br>
+    <button onclick="moveWindow()">move window</button>
+    <br>
+    <button onclick="movebyWindow()">moveby window</button>
+    <br>
+    <button onclick="ResizeToWindow()">resizeTo</button>
+    <br>
+    <button onclick="ResizeByWindow()">resizeBy</button>
+    <br>
+    <button onclick="scrollToWindow()">scrollTo</button>
+    <br>
+    <button onclick="scrollByWindow()">scrollBy</button>
+    <br>
+    <h3>JavaScript Location Object</h3>
+    <button onclick="locationfun()">location href</button>
+    <br>
+    <button onclick="Relode()">Relodepage</button>
+    <br>
+    <button onclick="assign()">Assign</button>
+    <br>
+    <button onclick="replace()">replace</button>
+    <br>
+    <h3>JavaScript History Object</h3>
+    <button onclick="Backward()">Backward</button>
+    <br>
+    <button onclick="Forward()">forward</button>
+    <br>
+    <button onclick="gofun()">go method</button>
+    <br>
+
+    <h3>Popupbox</h3>
+    <button onclick="alertbox()">alertbox</button>
+    <br>
+    <button onclick="confirmbox()">confirmbox</button>
+    <br>
+    <button onclick="PromptBox()">PromptBox</button>
+    <br>
+
+    <script>
+        function funresize(){        
+        var iHeight=window.innerHeight
+        console.log("innerhight"+iHeight)
+
+        var oHeight=window.outerHeight
+        console.log("outerheight"+oHeight)
+
+        var iwidth=window.innerWidth
+        console.log("innerWidth"+iwidth)
+
+        var owidth=window.outerWidth
+        console.log("outerwidth"+owidth)
+        }
+        var mywindow;
+        function openWindow(){
+            mywindow= window.open("","","width=500px,height=200px ,left=100px,top=100px");
+            mywindow.document.write("<p>The Poetry Translation Centre is very proud to partner with the Aké Arts and Books Festival to present a special series of translation workshops on the Nigerian languages of Yoruba, Igbo and Hausa.Join like-minded poetry lovers from across the world to discover new poetry and different cultures, share insights and language skills, working together to open up a poem in its original language and reassemble it in English. The result will be new group translations of contemporary Nigerian poems by Oladapo Olatubosun, Auwalu Anwar and Amarachi Attamah.To help in this task you will be guided by a translator who is an expert in the language that is the focus for that session, and a professional poet. They will offer insight into the nuances of the language and culture, and give helpful suggestions for the direction of the translation that is produced.Taking place online via Google Meet, the workshops are the perfect way to keep yourself feeling creative, engaged and connected to the world at large. A rough and ready guide translation is provided by the guest translator so there is no need to know the language being translated – simply sign up and bring your love of poetry and language.Three 90 minutes sessions focussing on a poem in each language will take place on Thursday 22 October 2020:Yoruba language workshop on the poetry of Oladapo Olatubosun: 10:00-11:30Hausa language workshop on the poetry of Auwalu Anwar: 12:30-14:00</p>")
+        }
+        function closeWindow(){
+            mywindow.close()
+        }
+
+        function moveWindow(){
+            mywindow.moveTo(200,100)
+            mywindow.focus();
+        }
+        
+        function movebyWindow(){
+            mywindow.moveBy(200,100)
+            mywindow.focus();
+        }
+        function ResizeToWindow(){
+            mywindow.resizeTo(400,400)
+        }
+        function ResizeByWindow(){
+            mywindow.resizeBy(400,400)
+        }
+        function scrollToWindow(){
+            mywindow.scrollBy(0,20)
+        }
+        function scrollByWindow(){
+            mywindow.scrollTo(0,20)
+        }
+
+        function locationfun(){
+         
+            document.write(location.href)
+            location.href="https://www.bing.com"
+          
+        }
+        function Relode(){
+            location.reload()
+        }
+        function assign(){
+            location.assign("https://www.bing.com")
+        }
+        function replace(){
+            location.replace("https://www.bing.com")
+        }
+        function Backward(){
+            history.back()
+        }
+        function Forward(){
+            history.forward()
+        }
+        function gofun(){
+            history.go(1)
+        }
+        document.write("navigator.appName: "+navigator.appName)
+        document.write("<br>cookiesEnabled is :" + navigator.cookieEnabled)
+        document.write("<br>navigator.appCodeName is " + navigator.appCodeName)
+        document.write("<br>navigator.platform is " + navigator.platform)
+        document.write("<br>navigator.onLine is " + navigator.onLine)
+
+        document.write("<hr>Available screen height is " + screen.availHeight)
+        document.write(" /window outerheight"+window.outerHeight)
+        document.write("<br>Available screen width is " + screen.width)
+        document.write(" /window outerwidth"+window.outerWidth)
+        document.write("<br>Screen Color Depth: " + screen.colorDepth)
+
+
+
+        function alertbox(){
+            x=10;
+            if(x==10){
+                alert("x value is "+x)
+            }
+        }
+
+        function confirmbox(){
+            if(confirm("you agree with terms and condition")){
+                alert("your crypto coin buy sucsesful")
+            }else{
+                alert("your crypto coin buy cancel")
+            }
+        }
+        function PromptBox(){
+            var number=prompt("enter a number",10)
+            for(let i=0;i<number;i++){
+                document.write("multiplication of "+i+"*"+number+"="+i*number+"<br>")
+            }
+        }
+    </script>
+</body>
+</html>

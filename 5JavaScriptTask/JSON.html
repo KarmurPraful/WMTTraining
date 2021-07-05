@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1" >Joson structure</button>
+    <br>
+    <button id="btn2">Json datatypes</button>
+    <br>
+    <button id="btn3">Stringify Function</button>
+    <br>
+    <button id="btn4">Parse Function</button>
+    <script>
+        var btn1=document.getElementById("btn1")
+        btn1.addEventListener('click',()=>{
+            var data='{"name":"praful","city":"dwrka" }'
+            document.write("JSON formate is ="+data)
+            
+        })
+
+
+        var btn2=document.getElementById("btn2")
+        btn2.addEventListener('click',()=>{
+            var data={
+                "name":"praful",
+                "city":"dwrka",
+                "num":30,
+                "color":["red","blue"],
+                "friend":{
+                    "name":"jaylo",
+                    "number":34,
+                    "add":"no"
+                }
+            }
+            document.write(data.friend.name+"<br>")
+            document.write(data.color[0]+"<br>")
+            for(i in data){
+                document.write(data[i]  +"<br>");
+            }
+
+        })
+
+        var btn3=document.getElementById("btn3")
+        btn3.addEventListener('click',()=>{
+            var data={
+                "name":"praful",
+                "city":"dwrka",
+                "num":30,
+                "color":["red","blue"],
+                "friend":{
+                    "name":"jaylo",
+                    "number":34,
+                    "add":"no"
+                }
+            }
+            document.write("<h4>it converts json object to string<br>")
+            var st=JSON.stringify(data)
+            document.write(typeof(st)+"<br>")
+            document.write(st)
+
+
+        })
+
+        var btn4=document.getElementById("btn4")
+        btn4.addEventListener('click',()=>{
+            var data='{"name":"praful","city":"dwrka" }'
+            
+            document.write("<h4>before converts string to json <br>")
+            document.write(typeof(data)+"<br>")
+            document.write(data)
+            var st=JSON.parse(data)
+            document.write("<h4>after converts string to json <br>")
+            document.write(typeof(st)+"<br>")
+            document.write(st)
+
+
+        })
+    </script>
+</body>
+</html>

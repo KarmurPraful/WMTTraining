@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .pk{
+           background: blueviolet;
+        }
+        .bx1{
+            background: rgb(233, 222, 208);
+            padding: 1px;
+
+        }
+        .bx2{
+            background: rgb(187, 160, 124);
+            padding: 1px;
+            margin: 7px;
+            width: 220px;
+            height: 110px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="bx1">
+    <h1 class="hed1" id="ha1"> Add and remove class</h1>
+    <a id="result" href="https://www.google.com/search?q=w3schools+html&oq=w&aqs=chrome.1.69i60j69i59j0i131i433j69i60j69i61j69i60l3.2148j0j1&sourceid=chrome&ie=UTF-8">W3school html(prevent default)</a>
+    <br>
+    <a href="https://www.w3schools.com/java/">w3School java</a>
+    <p id="para1" >this is first div <span> paragraph </span>in this paragraph we appluy some jquery opration</p>
+  
+    <p>this is <b> span tag in paragraph</b> seconde paragraph we are using replaceAll() methood replace all method at a time</p>
+    <button id="btn">Click me</button>
+    </div>
+    <input type="text" name="" id="inp">
+    <ul>
+        <li>Ram</li>
+        <li>Syaym</li>
+        <li>Kan</li>
+
+    </ul>
+    <button id="has">has()</button>
+    <button id="is">is()</button>
+    <br>
+    <br>
+    <button id="Each">Each()</button>
+
+    <h2></h2>
+
+    <script>
+
+        // has() and is() method            
+        $(document).ready(function(){
+            $("#has").click(function(){
+                $('p').has('span').css('background','gold')
+            })
+            $("#is").click(function(){
+                if($('p').parent().is('div')){
+                    console.log("yaaaa p is found in div")
+                }
+                else{
+                    console.log("ooo p is not found in div")
+                }
+            })
+
+            // Each() is work like loop
+            $("#Each").click(function(){
+                $("li").each(function(){
+                    console.log($(this).text())
+                })
+            })
+
+            // event type
+            $("#box").on("click dblclick mouseover mouseout ",function(event){
+                $('h2').html("Event: "+event.type)
+            })
+
+            // event.which()
+            $("#box").on("mouseover mouseout mousedown ",function(event){
+                $('h2').html("Event: "+event.type+":"+event.which);
+            })
+            $("#inp").on("keydown",function(event){
+                $('h2').html("Event: "+event.type+":"+event.which);
+            })
+
+            // event target
+            $('#box').on("click",function(){
+                $("h2").html("Target Element:"+event.target.nodeName)
+            })
+
+            // event.prevantDefault
+            $("#result").click(function(){
+                event.preventDefault()
+            })
+            // event propogation
+            $("#box").click(function(){
+                alert("div click")
+            })
+            $("#btn").click(function(e){
+                e.stopPropagation()
+                alert("btn click")
+            })
+            $('p').each(function(i){
+                $(this).on("click",{value:i},function(event){
+                    alert(event.data.value)
+                })
+            })
+
+
+        })
+
+
+            
+    
+    </script>
+</body>
+</html>

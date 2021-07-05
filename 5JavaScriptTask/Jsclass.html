@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Simpalclass()">Simpal class</button>
+    <br>
+    <button onclick="inherit()">class inherit</button>
+    <br>
+    <button onclick="staticclass()">staticclass</button>
+    <script>
+        function Simpalclass(){
+            class MyClass{
+                constructor(name,year){
+                    this.name=name;
+                    this.year=year;
+                }
+                fun1(fullName) {
+                    this.name=fullName
+                }
+            
+                myage(year1){
+                    return year1-this.year
+                }
+            }
+            var yr1=new Date()
+            var year1=yr1.getFullYear()
+            var obj1=new MyClass("praful",2020)
+            var total=obj1.myage(year1)
+            obj1.fun1("praful karmur")
+            document.write("total age is "+total)
+        }
+        function inherit(){
+            class cl1{
+                constructor(mobailn){
+                    this.mbname=mobailn
+                }
+                show(){
+                    return this.mbname
+                }
+            // 
+            }
+            class cl2 extends cl1{
+                constructor(mobailPR,mn){
+                    super(mn)
+                    this.mbpr=mobailPR
+                }  
+                show(){
+                    return this.mbpr
+                }
+            }
+            var obj1=new cl2(2000,"mi")
+            document.write(obj1.show())
+        }
+        function staticclass(){
+            class MyClass{
+                constructor(name,year){
+                    this.name=name;
+                    this.year=year;
+                }
+                static fun1(){
+                    return "hello sir,<br>"
+                }
+            }
+            document.write(MyClass.fun1())
+   
+            class MyClass1{
+                constructor(name,year){
+                    this.name=name;
+                    this.year=year;
+                }
+                static fun1(x){
+                    var yr1=new Date()
+                    var yr2=yr1.getFullYear()-x.year
+                    return "hello "+x.name+"<br>"+"your age is "+ yr2
+                }
+            }
+            obj1=new MyClass1("praful",1999)
+            document.write(MyClass1.fun1(obj1))
+        }
+    </script>
+</body>
+</html>

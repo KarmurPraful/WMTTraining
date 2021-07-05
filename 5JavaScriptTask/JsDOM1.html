@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .id1{
+            background-color: blueviolet;
+        }
+        .rm1{
+            color: red;
+        }
+        .bx1{
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="bx1" onclick="fun1()">
+        <h2>this is DOM demo</h2>
+        <p id="para1" class="pr1 rm1" >we can use targetig method to traverse a dom</p>
+    </div>
+    <div id="div2">
+        div2
+    </div>
+    <button id="getbyId" onclick="geteleID()">getElementById</button>
+    <button id="getbycl" onclick="geteleCL()">getElementByClass</button>
+    <button id="getbytg" onclick="geteleTG()">getElementsByTagName</button>
+    <br><br>
+    <b>Get DOM value</b><br>
+    <button id="intext" onclick="innertext()">innerTextGet</button>
+    <button id="inHtml" onclick="innetHtml()">innerHTMLGet</button>
+    <button onclick="getAttribute1()">getAttribute</button>
+    <button onclick="Attributes()">getAttributes</button><br> <br>
+    <b>Set DOM value</b><br>
+    <button id="intext" onclick="setinnertext()">innerTextSet</button>
+    <button id="inHtml" onclick="setinnetHtml()">innerHTMLSet</button>
+    <button onclick="setAttribute1()">setAttribute</button>
+    <button onclick="Attributes1()">setAttribute</button>
+    <button onclick="remattribute()">removeAttribute</button>
+    <br><br>
+    <b>querySelector</b><br>
+    <button onclick="queryselector()">queryselector</button>
+    <button onclick="queryselectorall()">queryselectorall</button><br>
+    <br><b>css Styling</b><br>
+    <button onclick="Cssstyle()">Css Style</button>
+    <button onclick="classname()">classname</button>
+    <br><br>
+    <b>classList</b>
+    <br>
+    <button onclick="classListsadd()">classListsadd</button>
+    <button onclick="classListsremove()">classListsremove</button>
+    <button onclick="classListsToggle()">classListsToggle</button>
+    <button onclick="classListsContains()">classListsContains</button>
+    <button onclick="classListsitem()">classListsitem</button>
+    <button onclick="classlistlength()">classlistlength</button>
+    <br><br>
+    <b>eventlisner</b><br>
+    <button id="addeventlisner">Addeventlisner</button>
+    <button id="remeventlisner">removeeventlisner</button>
+    <br>
+    <br><b>dom traverser</b>
+    <br>
+    <button onclick="parantElement()">parantElement</button>
+    <button onclick="parantNode()">parantNode</button>
+    <button onclick="Childern()">Childern</button>
+    <button onclick="ChildernNodes()">ChildernNodes</button>
+    <button onclick="firstChild1()">firstChild</button>
+    <button onclick="firsteleChild1()">firsteleChild1</button>
+    <button onclick="laastChild1()">laastChild1</button>
+    <button onclick="lastElementChilds()">lastElementChilds</button>
+    <button onclick="nextsibling()">nextsibling</button>
+    <button onclick="nextelesibling()">nextelesibling</button>
+    <br><br>
+    <b>Create and append Element</b>
+    <br>
+    <button onclick="createEleTxtCom()">createEleTxtCom</button>
+    <button onclick="AppendDiv()">Appendele</button>
+    <br><br>
+    <b>insertAdjacentHTML</b>
+    <br>
+    <button onclick="begorbigin()">befor bigin</button>
+    <button onclick="afterbigin1()">afterbigins</button>
+    <button onclick="begorend1()">begorend1</button>
+    <button onclick="afterEnd1()"> afterEnd1</button>
+    <br><br>
+    <b>Other Method</b>
+    <br>
+    <button onclick="replacchild()">replacchild</button>
+    <button onclick="removech()">removechild</button>
+    <button onclick="clonenode()">clonenode</button>
+    <button onclick="hasattri()">hasattri</button>
+    <button onclick="hasChildnoded()">hasChildnoded</button>
+
+    <script>
+        // target DOM Object
+        // 1.Id
+        // 2.className
+        // 3.TagName
+        function geteleID(){
+            var id=document.getElementById("box")
+            console.log(id)
+        }
+        function geteleCL(){
+            var class1=document.getElementsByClassName("bx1")
+            console.log(class1)
+        }
+        function geteleTG(){
+            var class1=document.getElementsByTagName("div")
+            console.log(class1)
+        }
+
+        // innerText
+        // innerhtml
+        // getAttribute
+        // getAttributeNode  is same as getAttribut
+        // Attribute         it gives all attributes at a time
+        function innertext(){
+            var id=document.getElementById("box").innerText
+            console.log("get content using id "+id)
+
+            var id=document.getElementsByClassName("bx1")[0].innerText
+            console.log("get content using class "+id)
+        }
+        function innetHtml(){
+            var id=document.getElementById("box").innerHTML
+            console.log("get content using id "+id)
+
+            var id=document.getElementsByClassName("bx1")[0].innerHTML
+            console.log("get content using class "+id)
+        }
+        function getAttribute1(){
+            var id=document.getElementById("box").getAttribute("class");
+            console.log("get atribute using id attr="+id)
+
+            var id=document.getElementsByClassName("bx1")[0].getAttribute("id");
+            console.log("get atribute using class attr="+id)
+
+
+        }
+        function Attributes(){
+            console.log(document.getElementById("box").attributes)
+            console.log(document.getElementsByClassName("bx1")[0].attributes)
+        }
+
+        // set() method
+        //  ->innerText
+        //  ->innerHTML
+        //  ->setAttribute
+        //  ->Attribute
+        //  ->removeAttribute
+        function setinnertext()
+        {
+            var id=document.getElementById("para1").innerText="set text using innerText"
+            console.log("we "+id+" based on id")
+
+            var id=document.getElementsByClassName("pr1")[0].innerText=" are set text using innerText"
+            console.log("we "+id+" based on id")
+        }
+        function setinnetHtml()
+        {
+            var id=document.getElementById("para1").innerHTML="<h1>set text using innerText</h1>"
+            console.log("we "+id+" based on id")
+
+            var id=document.getElementsByClassName("pr1")[0].innerHTML=" <h1>are set text using innerText</h1>"
+            console.log("we "+id+" based on id")
+        }
+
+        function setAttribute1()
+        {
+            var id=document.getElementById("para1").setAttribute("class","id1")
+            console.log("we "+id+" based on id")
+
+            var id=document.getElementsByClassName("pr1")[0].setAttribute("class","id1")
+            console.log("we "+id+" based on id")
+        }
+        function Attributes1()
+        {
+            var id=document.getElementById("para1").attributes[1].value="id1"
+            console.log("we "+id+" based on id")
+        }
+        function remattribute()
+        {
+            var id=document.getElementById("para1").removeAttribute("class")
+            console.log("we "+id+" based on id")
+        }
+        function queryselector(){
+            var id=document.querySelector(".bx1").removeAttribute("class")
+            console.log("we "+id+" based on id")
+        }
+        function queryselectorall(){
+            console.log(document.querySelectorAll("#box"))            
+        }
+
+
+        // DOM CSS Styling Methods:
+        //  ->Style
+        //  ->className           is return classname in form of string
+        //  ->classList           it returns classname in form of array
+        function Cssstyle(){
+            var ele=document.querySelector("#box").style="background:lightblue"
+        }
+        function classname(){
+            document.querySelector(".bx1").className="rm1"
+        }
+        // classlist
+        //  ->add()
+        //  ->remove()
+        //  ->toggle(class)
+        //  ->contains
+        //  ->item(index)
+        //  ->length
+        function classListsadd(){
+            document.querySelector(".bx1").classList.add("rm1","rm2")
+
+        }
+        function classListsremove(){
+            document.querySelector(".pr1").classList.remove("rm1")
+        }
+        function classListsToggle(){
+            document.querySelector(".pr1").classList.toggle("rm1")
+            console.log("if class availble then remove or vice varsa")
+        }
+        function classListsContains(){
+            var x=document.querySelector(".pr1").classList.contains("rm1")
+            console.log(x)
+        }
+        function classListsitem(){
+            var x=document.querySelector(".pr1").classList.item(1)
+            console.log(x)
+        }
+        function classlistlength(){
+            var x=document.querySelector(".pr1").classList.length
+            console.log(x)
+        }
+
+        // addeventlisner 
+
+        document.getElementById("addeventlisner").addEventListener("click",fun2)
+        function fun2(){
+            console.log("fun2 called")
+            this.style.border="2px solid red"
+        }    
+        document.getElementById("addeventlisner").addEventListener("mouseleave",abc)
+        function abc()
+        {
+            document.getElementById("box").innerHTML="<h2>Addeventlisner called</h2>"
+        }
+        document.getElementById("remeventlisner").addEventListener("click",()=>{
+            document.getElementById("addeventlisner").removeEventListener("mouseleave",abc)
+        })
+
+        // DOM Traversal Methods
+        // ->parantNode
+        // ->ParentElement
+        // ->Childen
+        // ->childNodes
+        // ->firstChild
+        // ->firstElementChild
+        // ->laastChild
+        // ->lastElementChld
+        // ->nextSibling
+        // ->previousElementSibling
+        // ->previousSibling
+        function parantElement(){
+            var x=document.getElementById("box").parentElement
+            console.log(x)
+        }
+        function parantNode(){
+            var x=document.getElementById("box").parentNode
+            console.log(x)
+        }
+        function Childern(){
+            var x=document.getElementById("box").children
+            console.log(x)
+        }
+        function ChildernNodes(){
+            var x=document.getElementById("box").childNodes
+            console.log(x)
+        }
+        function firstChild1(){
+            var x=document.getElementById("box").firstChild
+            console.log(x)
+        }
+        function firsteleChild1(){
+            var x=document.getElementById("box").firstElementChild
+            console.log(x)
+        }
+        function laastChild1(){
+            var x=document.getElementById("box").lastChild
+            console.log(x)
+        }
+        function lastElementChilds(){
+            var x=document.getElementById("box").lastElementChild
+            console.log(x)
+        }
+        function nextsibling(){
+            var x=document.getElementById("box").nextSibling
+            console.log(x)
+        }
+        function nextelesibling(){
+            var x=document.getElementById("box").nextElementSibling
+            console.log(x)
+        }
+        
+        // createelement
+        // createtextnode
+        // createcomment
+        // appendelement
+        function createEleTxtCom(){
+            var ele=document.createElement("h4")
+            console.log("created element= "+ele)
+            var ele=document.createTextNode("hello praful")
+            console.log("created textNode= "+ele)
+            var ele=document.createComment("this is a comment")
+            console.log("created comment= "+ele)
+
+        }
+        function AppendDiv(){
+            var ele=document.createElement("h4")
+            console.log("created element= "+ele)
+            var txt=document.createTextNode("hello praful")
+            console.log("created textNode= "+txt)
+            var com=document.createComment("this is a comment")
+            console.log("created comment= "+com)
+
+            ele.appendChild(txt)
+            ele.appendChild(com)
+            console.log(ele)
+
+            // append in div
+            var mainele=document.getElementById("box")
+            mainele.appendChild(ele)
+        }
+
+            // 1)insertAdjacentElement  
+            // 2)insertAdjacentHTML
+            // 3)insertAdjacentText 
+
+        function begorbigin(){
+            var mainele=document.getElementById("box")
+            var ele=document.createElement("h1")
+            var txt=document.createTextNode("this is h1 tag")
+            ele.appendChild(txt)
+            console.log(ele)
+            mainele.insertAdjacentHTML("beforebegin",ele)
+        }
+        function afterbigin1(){
+            var mainele=document.getElementById("box")
+            var ele=document.createElement("h1")
+            var txt=document.createTextNode("this is h1 tag")
+            ele.appendChild(txt)
+            console.log(ele)
+            mainele.insertAdjacentHTML("afterbegin",ele)
+        }
+        function begorend1(){
+            var mainele=document.getElementById("box")
+            var ele=document.createElement("h1")
+            var txt=document.createTextNode("this is h1 tag")
+            ele.appendChild(txt)
+            console.log(ele)
+            mainele.insertAdjacentHTML("beforeend",ele)
+        }
+        function afterEnd1(){
+            var mainele=document.getElementById("box")
+            var ele=document.createElement("h1")
+            var txt=document.createTextNode("this is h1 tag")
+            ele.appendChild(txt)
+            console.log(ele)
+            mainele.insertAdjacentHTML("afterend",ele)
+        }
+
+        // replaceChild() & Removechiled()
+        function replacchild(){
+            var ele=document.createElement("h4")
+            var txt=document.createTextNode("hello praful")
+
+            ele.appendChild(txt)
+
+            var target=document.getElementById("box")
+            var oldele=target.children[0]
+            console.log(oldele)
+            target.replaceChild(ele,oldele)
+
+        }
+
+        function removech(){
+            var target=document.getElementById("box")
+            var oldele=target.children[0]
+            target.removeChild(oldele)
+        }
+
+        function clonenode(){
+            var mainele=document.getElementById("box").children[1]
+            console.log(mainele)
+            var copyele=mainele.cloneNode(true)
+            console.log(copyele)
+            
+            document.getElementById("div2").appendChild(copyele)
+
+
+        }
+
+        // hasAttribute() 
+        // hasChildNode()
+        function hasattri(){
+            var mainele=document.getElementById("box")
+            var tr=mainele.hasAttribute("class")
+            console.log(tr)
+        }
+        function hasChildnoded(){
+            var x=document.getElementsByTagName("div")[0]
+            var find=x.hasChildNodes()
+            console.log(find)
+        }
+
+
+    </script>
+</body>
+</html>

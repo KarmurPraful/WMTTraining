@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .main-outer{
+            height: 500px;
+            width: 400px;
+            background-color: rgb(124, 174, 218);
+            border: 2px solid blanchedalmond;
+        }
+        .outer{
+            height: 390px;
+            margin: 20px;
+            background-color: rgb(209, 194, 126);
+            border: 2px solid blanchedalmond;
+        }
+        .inner{
+            height: 300px;
+            margin: 20px;
+            background-color: rgb(241, 180, 216);
+            border: 2px solid blanchedalmond;
+        }
+        .inner div{
+            margin: 15px;
+            background-color: chartreuse;
+            height: 120px;
+            width: 67px;
+            border: 2px solid blanchedalmond;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-outer">
+        <h2>Main Outer</h2>
+        <div class="outer" style="position: relative;">
+            <h2 >outer</h2>
+            <div class="inner">
+                <h2 class="child-head">Inner</h2>
+                <div id="child-A">A</div>
+                <div id="child-C">C</div>
+                <div id="child-D">d</div>
+            </div>
+        </div>
+    </div>
+    <button id="pr1">parent</button>
+    <button id="pr2">parents</button>
+    <button id="pr3">parentsUntil</button>
+    <button id="pr4">offsetParent</button>
+    <button id="pr5">closest</button>
+
+    <button id="dc1">childern</button>
+    <button id="dc2">find</button>
+    <br>
+    <button id="sb1">siblings()</button>    
+    <button id="sb2">next()</button>
+    <button id="sb3">nextAll()</button>
+    <button id="sb4">nextUntill()</button>
+    <button id="sb5">prev()</button>
+    <button id="sb6">prevAll()</button>
+    <button id="sb7">prevUntil()</button>
+    <br>
+<button id="fl1">first()</button>   
+<button id="fl2">last()</button>
+<button id="fl3">eq()</button>
+<button id="fl4">filter()</button>
+<button id="fl5">not()</button>
+<button id="fl6">slice()</button>
+    <script>
+        
+        $(document).ready(function(){
+            
+            // DOM Traversing Method 
+            // 1.(Ancestors Methods) usin this we acsses(1.parant ,2.grandpant,3.gre)
+            // 2.(decendants Methods)
+            // 3.(Siblings Methods)
+            // 4.(Filtering Methods)
+
+            // 1.(Ancestors Methods)
+            //   ->parent()
+            //   ->parents()
+            //   ->parentsUntil()
+            //   ->closest()
+            //   ->offsetparent()  it check all div where position property available it checnged
+            $("#pr1").click(function(){
+                $("#child-C").parent().css("background","blue") 
+            })
+            $("#pr2").click(function(){
+                $("#child-C").parents().css("background","lightblue")
+            })
+            $("#pr3").click(function(){
+                $("#child-C").parentsUntil(".main-outer").css("background","red")
+            })
+            $("#pr4").click(function(){
+                $("#child-C").offsetParent().css("background","red")
+            })
+            $("#pr5").click(function(){
+                $("#child-C").closest("div").css("background","rgb(53, 214, 208)")
+            })
+            
+            // 2.(decendants Methods)
+            //   ->children()
+            //   ->find()
+            $("#dc1").click(function(){
+                $(".inner").children().css("background","red")
+            })
+            $("#dc2").click(function(){
+                $(".inner").find("h2").css("background","red")
+            })
+
+
+            // 3.(Siblings Methods)
+            //   ->siblings()
+            //   ->next()
+            //   ->nextAll
+            //   ->nextUntill()
+            //   ->prev()
+            //   ->prevAll()
+            //   ->prevUntil()
+            $("#sb1").click(function(){
+                $("#child-C").siblings().css("background","rgb(69, 136, 178)")
+            })
+            $("#sb2").click(function(){
+                $("#child-A").next().css("background","rgb(69, 136, 178)")
+            })
+            $("#sb3").click(function(){
+                $("#child-A").nextAll().css("background","rgb(69, 136, 178)")
+            })
+            $("#sb4").click(function(){
+                $("#child-A").nextUntil("#child-D").css("background","rgb(69, 136, 178)")
+            })
+
+            $("#sb5").click(function(){
+                $("#child-A").prev().css("background","rgb(69, 136, 178)")
+            })
+            $("#sb6").click(function(){
+                $("#child-D").prevAll().css("background","rgb(69, 136, 178)")
+            })
+            $("#sb7").click(function(){
+                $("#child-D").prevUntil("#child-A").css("background","rgb(69, 136, 178)")
+            })
+
+            // 4.(Filtering Methods)
+            //   ->first
+            //   ->last
+            //   ->eq()
+            //   ->filter()
+            //   ->not
+            //   ->Slice()
+
+            $("#fl1").click(function(){
+                $("div").first().css("background","rgb(130, 76, 76)")
+            })
+            $("#fl2").click(function(){
+                $("div").last().css("background","rgb(110, 76, 76)")
+            })
+            $("#fl3").click(function(){
+                $("div").eq(3).css("background","rgb(102, 5, 135)")
+            })
+            $("#fl4").click(function(){
+                $("div").filter("#child-C").css("background","rgb(201, 48, 183)")
+            })
+            $("#fl5").click(function(){
+                $("div").not("#child-D ,#child-A").css("background","rgb(102, 5, 135)")
+            })
+            $("#fl4").click(function(){
+                $("div").slice("#child-C ,child-D").css("background","rgb(201, 48, 183)")
+            })
+
+            
+
+            
+        })
+
+
+            
+    
+    </script>
+</body>
+</html>

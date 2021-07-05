@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="simpalArr()">simpalArr</button>
+    <br>
+    <button id="fe" onclick="foreachfun()">foreachfun</button>
+    <br>
+    <button onclick="ArrMethd()">arrMethod</button>
+    <br>
+    <button onclick="Mapfun()">Map Function</button>
+    <br>
+    <button onclick="FilterFun()">Filter</button>
+    <br>
+    <button onclick="Reducefun()">Reduce</button>
+    <br>
+    <button onclick="includeFun()">includeFun</button>
+    <br>
+    <button onclick="FindFun()">Findfun</button>
+    <br>
+    <button onclick="indexof()">indexof</button>
+    <script>
+        function simpalArr(){
+            const arr=['saab','volvo','bmw',2]
+            var str=""
+            var num=""
+            for(i of arr){
+                document.write(typeof(i))
+                if(typeof(i)==="number"){
+                    num=num+"<br>"+i;
+                 
+                }
+                else{
+                    str=str+"<br>"+i;
+                }
+            }
+            document.write(str)
+            
+        }
+
+        function foreachfun(){
+            const arr=['saab','volvo','bmw',2]
+            arr.forEach((value)=>{
+                document.write(value+"<br>")
+            })
+        }
+
+        function ArrMethd(){
+            document.write("<b>toString</b><br>")
+            var arr2=['saab','volvo','bmw',2]
+            var st=arr2.toString()
+            const tp=typeof(st)
+            document.write(st)
+            document.write("<br>type of toString variable is ["+tp+"]")
+
+                       // join()
+            var arr=['saab','volvo','bmw',2];
+            var arr1=['saab1','volvo1','bmw1',21]
+            document.write("<br><b>Shift</b><br>")
+            document.write(arr+"<br>")
+            arr.shift()
+            document.write(arr)
+
+            var arr=['saab','volvo','bmw',2];
+            document.write("<br><b>unShift</b><br>")
+            document.write(arr+"<br>")
+            arr.unshift("pk")
+            document.write(arr)
+
+            var arr=['saab','volvo','bmw',2,"abhi",];
+            document.write("<br><b>splice</b><br>")
+            document.write(arr+"<br>")
+            arr.splice(2,1,"lemon","Kiwi");
+            document.write(arr)
+           
+            var arr=['saab','volvo','bmw',2];
+            var arr1=['saab1','volvo1','bmw1',21]
+
+            document.write("<br><b>concat</b><br>")
+            document.write("arr="+arr+"<br>"+"arr1="+arr1+"<br>")
+            var arr3=arr.concat(arr1)
+            document.write("concat array is ="+arr3)
+            
+         
+            var arr=['saab','volvo','bmw',2];
+            document.write("<br><b>slice</b><br>")
+            document.write("arr="+arr+"<br>")
+            var arr3=arr.slice(2,3)
+            document.write("slice array is ="+arr3)
+
+            var arr=['saab','volvo','bmw',2];
+            document.write("<br><b>join</b><br>")
+            document.write("arr="+arr+"<br>")
+            var st=arr.join("/, ")
+            document.write("join array is ="+st)
+            document.write("<br>type of st is ="+typeof(st))
+        }
+
+
+        function Mapfun(){
+            var arr=[2,3,4,5,6];
+            var arr1=arr.map((value)=>{
+                return value=value*2
+            })
+            document.write("<br>orignal arr ="+arr)
+            document.write("<br>map array is ="+arr1)
+        }
+        function FilterFun(){
+            var arr=[2,3,12,6,23,10,8];
+            var arr1=arr.filter((value)=>{
+                return value>8
+            })
+            document.write("<br>orignal arr ="+arr)
+            document.write("<br>Filter array is ="+arr1)
+        }
+        function Reducefun(){
+            var arr=[2,3,4,5,6];
+            var arr1=arr.reduce((total,value)=>{
+                return total+value
+            })
+            document.write("<br>orignal arr ="+arr)
+            document.write("<br>reduce array is ="+arr1)
+        }
+
+        function includeFun(){
+            var arr=[14,6,12,8]
+            delete arr[1];
+            document.write("element include ?<br>"+ arr.includes(6))
+
+        }
+        function FindFun(){
+            const arr=[14,30,23,10,25,51]
+            var filarr=arr.find((value,index)=>{
+                // return index>1
+                return value>15
+            })
+            document.write(filarr)
+        }
+        function indexof(){
+            const arr=[14,30,23,10,25,51]
+            var filarr=arr.findIndex((value,index)=>{
+                // return index>1
+                return value>9
+            })
+            document.write(filarr)
+        }
+    </script>
+</body>
+</html>

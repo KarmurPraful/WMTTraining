@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">First name</label>
+        <input type="text" name="" id="fname" required><br><br>
+        number<input type="number" min="23"><br><br>
+        <label for="">Email</label>
+        <input type="email"><br><br>
+        <label for="">select</label>
+        <select>
+            <option>india</option>
+        </select><br><br>
+    </form>
+    <button onclick="validate()">validate</button>
+    <br><br>
+
+    <script>
+        function validate(){
+            var input1=document.getElementById("fname")
+            // if(!input1.checkValidity()){
+            //     document.write(input1.validationMessage)
+            // }
+            // else{
+            //     document.write("not valid")
+            // }
+            if(!input1.validity.rangeUnderflow){
+                document.write("value to small")
+            }
+            else{
+                document.write("not valid")
+            }
+        }
+
+    </script>
+</body>
+</html>

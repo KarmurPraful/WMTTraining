@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js" ></script>
+</head>
+<body>
+    <h1 id="hed">jQuery tutorial</h1>
+    <ul id="list">
+        <li>orange</li>
+        <li class="test">banana</li>
+        <li>grapes</li>
+        <li class="test">Apple</li>
+        <li>Guava</li>
+    </ul>
+    <script>
+        $(document).ready(function(){
+            $("#hed ").css("border","1px solid red");
+            $("#hed ").css("color","rgb(141, 141, 239)");
+            $("#list li ").css("border","1px solid red");
+            $(".test").css("border","2px solid rgb(34, 214, 208)");
+            $("li:first").css("border","2px solid rgb(14, 554, 18)");
+            $("li:first-child").css("border","2px solid rgb(14, 554, 18)");
+            $("li:last").css("border","2px solid rgb(314, 554, 18)");
+            $("li:last-child").css("border","2px solid rgb(143, 55, 18)");
+
+            // for particular element we usde eq(equl to),lt(lover then),gt(grater then)
+            $("ul li:eq(4)").css("border","2px solid rgb(14, 554, 18)");
+
+
+            
+        })
+
+    </script>
+</body>
+</html>

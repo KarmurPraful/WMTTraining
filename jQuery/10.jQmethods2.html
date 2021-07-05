@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .pk{
+           background: blueviolet;
+        }
+        .bx1{
+            background: rgb(233, 222, 208);
+            padding: 1px;
+            width: 260px;
+            height: 170px;
+            overflow: auto;
+            position: relative;
+        }
+        .bx2{
+            background: rgb(187, 160, 124);
+            padding: 1px;
+            margin: 7px;
+            width: 220px;
+            height: 110px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="bx1">
+    <h1 class="hed1" id="ha1"> Add and remove class</h1>
+    <p id="para1" >this is first div paragraph in this paragraph we appluy some jquery opration</p>
+  
+    <p>this is seconde paragraph we are using replaceAll() methood replace all method at a time</p>
+    </div>
+    <div id="box2" class="bx2">
+        <p>this is seconde div</p>
+    </div>
+    <button id="positionbtn">possition</button>
+    <button id="offsetbtn">offset</button>
+    <br><br>
+    <button id="scrTbtn">scrooltop</button>
+    <button id="scrLbtn">scroolleft</button>
+    <br><br>
+    <button id="hasclass">hasclass() method</button>
+    <br><br>
+    <button id="hdbtn">hide()</button>
+    <button id="shbtn">show()</button>
+    <button id="tobtn">toggle()</button>
+    <br><br>
+    <button id="fobtn">fadeout()</button>
+    <button id="fibtn">fadein()</button>
+    <button id="ftbtn">fadeToggle()</button>
+    <button id="fadTbtn">fadeTo</button>
+    <br><br>
+    <button id="slupbtn">alideup()</button>
+    <button id="sldnbtn">slideDown()</button>
+    <button id="sltobtn">slidetoggle()</button>
+    <br><br>
+    <button id="animate">animation</button>
+    <button id="stopbtn">Stop()</button>
+    <button id="mulmethod">Multipal Method</button>
+
+    
+
+    <script>
+            
+        $(document).ready(function(){
+            // possition() relativ to its parant  and only get two value(top,left)
+            // Offset-Relative to the Document  
+           
+            $("#positionbtn").click(function(){
+                console.log($("#box h1").position())
+            })
+            $("#offsetbtn").click(function(){
+                console.log($("#box h1").position())
+            })
+            
+            // scrooltop
+            // scroolleft
+            $("#scrTbtn").click(function(){
+                console.log($(document).scrollTop())
+            })
+            $("#scrLbtn").click(function(){
+                console.log($(document).scrollLeft())
+            })
+
+            // hasclass
+            $("#hasclass").click(function(){
+                var hasclass=$("#box").hasClass("bx1")
+                console.log("class available ?"+hasclass)
+            })
+
+            // hide()
+            // show()
+            // toggle()
+            $("#hdbtn").click(function(){
+                $("#box h1").hide()
+            })
+            $("#shbtn").click(function(){
+                $("#box h1").show()
+            })
+            $("#tobtn").click(function(){
+                $("#box h1").toggle()
+            })
+
+            // fadein() it work is show the tag and cotent like show() method
+            // fadeout()  it work is hide the tag and cotent like hide() method
+            // fadeToggle()
+            // fadeTo(speed,opacity,callback)
+            $("#fobtn").click(function(){
+                $("#box h1").fadeOut(4000)
+            })
+            $("#fibtn").click(function(){
+                $("#box h1").fadeIn(3000)
+            })
+            $("#ftbtn").click(function(){
+                $("#box h1").fadeToggle()
+            })
+            $("#fadTbtn").click(function(){
+                $("#box h1").fadeTo(2000,0.5)
+            })
+
+            // slideDown()
+            // slideUp()
+            // slideToggle()
+            $("#slupbtn").click(function(){
+                $("#box h1").slideUp()
+            })
+            $("#sldnbtn").click(function(){
+                $("#box h1").slideDown()
+            })
+            $("#sltobtn").click(function(){
+                $("#box h1").slideToggle()
+            })
+
+
+
+            // animation method
+            // $(selector).animation({params},speed,callback); in params css property should be camelcase
+            $("#animate").click(function(){
+                $("#box").animate({
+                    left:"250px",
+                    width:"290px",
+                    top:"178px",
+                    fontSize:"10px",
+                },3000,function(){console.log("first animation completed")})
+            })
+
+
+            // stop() mwthod
+            $("#stopbtn").click(function(){
+                $("#box").stop()
+            })
+
+
+            // mulmethod() mince multimethd combaine
+            $("#mulmethod").click(function(){
+                $("#box").css("background",'pink').slideUp().slideDown()
+            })
+            
+            // DOM Traversing Method 
+            // 1.(Ancestors Methods) usin this we acsses(1.parant ,2.grandpant,3.gre)
+            // 2.(decendants Methods)
+            // 3.(Siblings Methods)
+            // 4.(Filtering Methods)
+
+            // 1.(Ancestors Methods)
+            //   ->parent()
+            //   ->parents()
+            //   ->parentsUntil()
+            //   ->closest()
+            //   ->offsetparent()
+            
+
+
+
+        })
+
+
+            
+    
+    </script>
+</body>
+</html>

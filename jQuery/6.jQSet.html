@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .red{
+            color: red;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1id">jQuery set() method</h1>
+    <div id="box" class="div1">
+        <h2>Test Box</h2>
+        <p id="para1">Lorem ipsum </p>
+    </div>
+    <form action="">
+        name:<input type="text" value="praful" id="fname"><br><br>
+        email:<input type="email"><br><br>
+    </form>
+    <button id="btn">click and apply jq</button>
+    <script>
+        // text
+        // html
+        // attr
+        // val
+        $(document).ready(function(){
+            $("#btn").click(function(){
+            
+                var x=$("#fname").val()
+                $("#h1id").text(x)
+
+                $("#para1").html("<h4>hello praful")
+
+                $("#box h2").attr('class',"red")
+                console.log(attr1)
+
+                $("#fname").val("<h4>hello praful")
+            
+            })
+            var x=$("#para1").text()
+            console.log("text value is"+x)
+
+            var y=$("#para1").html()
+            console.log("html value is"+y)
+
+            var p1=$("#fname").val()
+            console.log(p1)
+
+            var attr1=$("#box").attr('class')
+            console.log(attr1)
+
+        })
+    </script>
+</body>
+</html>

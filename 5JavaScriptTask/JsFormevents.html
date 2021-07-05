@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test{
+            width: 150px;
+            height: 150px;
+            background: red;
+        }
+    </style>
+</head>
+<body onresize="fun1()" >
+    <!-- <button onclick="fun1()">Clck me</button> -->
+    <!-- <button ondblclick="fun1()">Clck me</button> -->
+    <!-- <button onmouseover="fun1()">Clck me</button> -->
+    <!-- <button onmouseout="fun1()">Clck me1</button> -->
+    <!-- <button onkeypress="fun1()">Clck me</button> -->
+    <!-- <button onkeydown="fun1()">Clck me</button> -->
+    <!-- <button onscroll="fun1()">Clck me</button> -->
+
+    <!-- event 
+    onchange,select
+    onfocus
+    onblur
+    oninput -->
+    <form action="#" onsubmit="submitfun()">
+        Name: <input type="text" id="fname"  onfocus="myfun1(this)" onblur="blurfun(this)"  oninput="inputfun(this)" onselect="selectfun(this)" oninvalid="alert('enter first name')" required><br><br>
+        Class: <input type="text"  onfocus="myfun1(this)" onblur="blurfun(this)"  onchange="chfun(this)"><br><br>
+
+                <label for="">Country:</label>
+                <select name="" id=""  onchange="chfun(this)">
+                    <option value="">india</option>
+                    <option value="">pak</option>
+                </select><br><br>
+
+        <input type="submit">
+
+    </form>
+
+    <div id="test" style="border: 1px solid red;"></div>
+    <br>
+    <button onclick="animation()">animation</button>
+    <button onclick="stopAnimation()">stro animation</button>
+    <script>
+
+        function fun1(){
+            document.write("event called")
+        }
+        function myfun1(ele){
+            ele.style.background="lightgreen"
+        }
+
+        // onblurevent 
+        function blurfun(ele){
+            ele.style.background=""   
+        }
+
+        // oninput event
+        function inputfun(ele){
+            var x=ele.value
+            console.log(x)
+            document.getElementById("test").innerHTML=x
+        }
+
+        // onchange event
+        function chfun(ele){
+            var x=ele.value
+            console.log(x)
+        }
+
+        // select event
+        function selectfun(ele){
+            var x=ele.value
+            console.log(x)
+            document.getElementById("test").innerHTML=x
+        }
+
+        // submit event
+        function submitfun(){
+            var x=document.getElementById("fname").value
+            console.log(x)
+            console.log("submited form")
+        
+        }
+
+
+        // animaation
+        function animation(){
+        
+        // setintevarl is run infinite in given interval
+        var a=0;
+        var id=setInterval(Anim,100);
+        function Anim(){
+            a=a+10;
+            if(a==200){
+                clearInterval(id);
+            }else{
+            var target=document.getElementById("test");
+            target.style.marginLeft=a+"px";
+            }
+        }
+
+        // settimeout run only one time
+        var id1=setTimeout(anim1,2000);
+        function anim1(){
+            var tr=document.getElementById("test");
+            tr.style.width="250px";
+        }
+        }
+        function stopAnimation(){
+            clearInterval(id1)
+            clearInterval(id)
+        }
+
+
+    </script>
+</body>
+</html>

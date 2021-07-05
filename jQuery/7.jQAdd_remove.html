@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .pk{
+           background: blueviolet;
+        }
+        .hed1{
+            background: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <h1  id="ha1"> Add and remove class</h1>
+    <p id="para1" >this is paragraph</p>
+    <button class="addbtn">Add class</button>
+    <button class="rembtn">Remove class</button>
+    <button class="togbtn">toggle class</button>
+
+    <script>
+        // addClass()
+        // removeClass
+        // toggleClass
+        $(document).ready(function(){
+            
+            $(".addbtn").click(function(){
+                $("#ha1").addClass("pk")
+                console.log("class added sucssesfully")
+            })
+            $(".rembtn").click(function(){
+            
+                $("#ha1").removeClass("pk")
+                console.log("class remove sucssesfully")
+            })
+
+            $(".togbtn").click(function(){
+                $("#ha1").toggleClass("pk")
+                console.log("class tog sucssesfully")
+            })
+        })
+    </script>
+</body>
+</html>

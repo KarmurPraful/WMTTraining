@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form action="#" id="fm1">
+        fname: <input type="text" id="fname"><br><br>
+        email: <input type="email"><br><br>
+        select: <select name="" id="">
+            <option value="">india</option>
+            <option value="">pakistan</option>
+        </select><br><br>
+        <input type="submit" >
+        <div id="div1" style="border: 2px solid red;"></div>
+    </form>
+    <script>
+        $(document).ready(function(){
+            $("#fname").focus(function(){
+                // $("#fname").css("background","red")
+            })
+            $("#fname").blur(function(){
+                $("#fname").css("background","")
+            })
+            $("#fname").change(function(){
+                $("#fname").css("color","green")
+                var x1=$("#fname").val();
+                $("#div1").html(x1)
+                console.log("value change")
+            })
+            $("#fname").select(function(){
+                $("#fname").css("color","red")
+                console.log("select value")
+            })
+
+            $("#fm1").submit(function(){
+                $("body").css("background","lightblue")
+                console.log("select value")
+            })
+
+
+        })
+    </script>
+</body>
+</html>

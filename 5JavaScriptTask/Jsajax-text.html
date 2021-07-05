@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Hear we load data</p>
+    <button onclick="loadData()">click</button>
+    <script>
+        function loadData(){
+            var xhhtp=new XMLHttpRequest();
+            xhhtp.onreadystatechange=function(){
+
+                if(this.readyState==4 && this.status==200){               
+                    document.getElementById("demo").innerHTML=this.responseText
+                    
+                }else if(this.readyState==4 && this.status==404){
+                    document.getElementById("demo").innerHTML="<h1>file Not Found</h1>"
+                    document.getElementById("demo").style="color:red"
+
+                }
+            }
+            
+
+            console.log("wait file is loaded")
+            setTimeout(()=>{ 
+            var i=1           
+            xhhtp.open('GET',"readme.txt",true);
+            xhhtp.send();},1000)
+
+
+        }
+    </script>
+</body>
+</html>
