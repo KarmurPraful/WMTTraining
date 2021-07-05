@@ -55,7 +55,7 @@
     <button id="ftbtn">fadeToggle()</button>
     <button id="fadTbtn">fadeTo</button>
     <br><br>
-    <button id="slupbtn">alideup()</button>
+    <button id="slupbtn">salideup()</button>
     <button id="sldnbtn">slideDown()</button>
     <button id="sltobtn">slidetoggle()</button>
     <br><br>
@@ -81,7 +81,7 @@
             // scrooltop
             // scroolleft
             $("#scrTbtn").click(function(){
-                console.log($(document).scrollTop())
+                console.log($("#box").scrollTop())
             })
             $("#scrLbtn").click(function(){
                 console.log($(document).scrollLeft())
@@ -111,7 +111,7 @@
             // fadeToggle()
             // fadeTo(speed,opacity,callback)
             $("#fobtn").click(function(){
-                $("#box h1").fadeOut(4000)
+                $("#box h1").fadeOut(1000)
             })
             $("#fibtn").click(function(){
                 $("#box h1").fadeIn(3000)
@@ -127,7 +127,7 @@
             // slideUp()
             // slideToggle()
             $("#slupbtn").click(function(){
-                $("#box h1").slideUp()
+                $("#box h1").slideUp(3000)
             })
             $("#sldnbtn").click(function(){
                 $("#box h1").slideDown()
@@ -160,19 +160,7 @@
             $("#mulmethod").click(function(){
                 $("#box").css("background",'pink').slideUp().slideDown()
             })
-            
-            // DOM Traversing Method 
-            // 1.(Ancestors Methods) usin this we acsses(1.parant ,2.grandpant,3.gre)
-            // 2.(decendants Methods)
-            // 3.(Siblings Methods)
-            // 4.(Filtering Methods)
 
-            // 1.(Ancestors Methods)
-            //   ->parent()
-            //   ->parents()
-            //   ->parentsUntil()
-            //   ->closest()
-            //   ->offsetparent()
             
 
 

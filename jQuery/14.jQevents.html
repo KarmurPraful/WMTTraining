@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        #box{
+            width:550px;
+            height: 350px;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Event Property</h1>
+
+    <div id="box">
+        <h2>This is a Box</h2>
+        <p>this is a paragraph you can write your code hear
+            this is a paragraph you can write your code hear
+            this is a paragraph you can write your code hear
+            this is a paragraph you can write your code hear</p>
+            <button>Button</button>
+    </div>
+    <input type="text" name="" id="inputbox">
+    <h2></h2>
+    <button id="Eeventtype" >Event Type</button>
+    <button id="mousedown">mousedown</button>
+    <button id="eventTarget">eventTarget</button>
+    <script>
+        $(document).ready(function(){
+            $("#Eeventtype").click(function(){
+                $('#box').on("click dblclick mouseover mouseout",(event)=>{
+                    $("h2").html("Event:"+event.type)
+                })             
+            })
+
+            // mousedown give result like which mouse click accurs
+            //  ->LeftClick
+            //  ->rightClick
+            //  ->center Click
+            $("#mousedown").click(function(){
+                $('#box').on("mousedown mouseover mouseout",(event)=>{
+                    $("h2").html("Event:"+event.which)
+                })   
+                $('#inputbox').on("keydown ",(event)=>{
+                    $("h2").html("Event:"+event.which)
+                })             
+            })
+
+            // event target property
+            //  ->it show to where you click loke (h1, p, button,etc..)
+            $("#eventTarget").click(function(){
+                $('#box').on("mousedown mouseover mouseout",(event)=>{
+                    $("h2").html("Event:"+event.which)
+                })   
+                $('#inputbox').on("keydown ",(event)=>{
+                    $("h2").html("Event:"+event.which)
+                })             
+            })
+
+
+        })
+
+    </script>
+</body>
+</html>

@@ -8,3 +8,4 @@ onmessage=function(e){
     postMessage(result)
 
 }
+onmessage()

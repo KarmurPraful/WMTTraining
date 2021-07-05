@@ -33,7 +33,7 @@
     <a href="https://www.w3schools.com/java/">w3School java</a>
     <p id="para1" >this is first div <span> paragraph </span>in this paragraph we appluy some jquery opration</p>
   
-    <p>this is <b> span tag in paragraph</b> seconde paragraph we are using replaceAll() methood replace all method at a time</p>
+    <p>this is <b> bold tag in paragraph</b> seconde paragraph we are using replaceAll() methood replace all method at a time</p>
     <button id="btn">Click me</button>
     </div>
     <input type="text" name="" id="inp">
@@ -56,7 +56,7 @@
         // has() and is() method            
         $(document).ready(function(){
             $("#has").click(function(){
-                $('p').has('span').css('background','gold')
+                $('p').has('b,span').css('background','gold')
             })
             $("#is").click(function(){
                 if($('p').parent().is('div')){
