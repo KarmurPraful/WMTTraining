@@ -11,7 +11,10 @@
     <button onclick="loadData()">click</button>
     <script>
         function loadData(){
+            // 1st step
             var xhhtp=new XMLHttpRequest();
+
+            // 3rd step
             xhhtp.onreadystatechange=function(){
 
                 if(this.readyState==4 && this.status==200){               
@@ -26,8 +29,8 @@
             
 
             console.log("wait file is loaded")
+            // 2nd step
             setTimeout(()=>{ 
-            var i=1           
             xhhtp.open('GET',"readme.txt",true);
             xhhtp.send();},1000)
 

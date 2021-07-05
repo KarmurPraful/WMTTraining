@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="str1" >String Ex1</button><br>
+    <br>
+    <button id="dt1">Date Ex2</button><br>
+    <br>
+    <button onclick="dateFormate()">dateFormate Ex3</button>
+    <br>
+    <br>
+    <button onclick="objex4()">object ex4</button>
+    <br><br>
+    <button onclick="sortArr()" >sortArr</button>
+    <br><br>
+    <button onclick="strExr5()">strExr5</button>
+    <br><br>
+    <script>
+        document.getElementById("str1").addEventListener("click",()=>{
+            var str="hello word this is a string"
+            document.write("orignal String is : " +str+"<br>")
+
+            var str1=str.split(" ")  
+            document.write("modifide String is: ")
+            for(i of str1) {
+                  document.write(i[0].toUpperCase()+i.slice(1)+" ")  
+            }  
+        })
+
+        
+        document.getElementById("dt1").addEventListener("click",()=>{
+        setInterval(() => {
+
+            var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var dt=new Date()
+            var hours = dt.getHours() > 12 ? dt.getHours() - 12 : dt.getHours();
+            var am_pm = dt.getHours() >= 12 ? "PM" : "AM";
+            document.write("Today is : "+ days[dt.getDay()]+". Current Time is : "+hours + " "+am_pm+":"+dt.getMinutes()+":"+dt.getSeconds()+"<br>")
+            
+        }, 1000);
+        })
+
+        
+
+        function dateFormate(){
+            var dt=new Date()
+            dd=dt.getDate()
+            mm=dt.getMonth()+1
+            yyyy=dt.getFullYear()
+            document.write(`${mm}-${dd}-${yyyy}<br>`)
+            document.write(`${mm}/${dd}/${yyyy}<br>`)
+            document.write(`${dd}-${mm}-${yyyy}<br>`)
+            document.write(`${dd}/${mm}/${yyyy}<br>`)
+        }
+
+        
+
+        
+        
+        function objex4(){
+            var student={
+            name:"David Rayy",
+            sclass:"VI",
+            rollno:12
+           }
+
+           document.write("<h3>befor deleting rollno</h3>")           
+           for(i in student){
+               document.write(`${i} : `+student[i]+"<br>")
+           }
+           delete student.rollno
+           document.write("<h3>after deleting rollno</h3>") 
+           for(i in student){
+               document.write(`${i} : `+student[i]+"<br>")
+           }                  
+        }
+
+        function sortArr(){
+            var arr1=[3,8,7,6,5,-4,-3,2,1]
+            document.write("Sorting array is : "+arr1.sort(function(a, b){return a - b}))
+        }
+
+        function strExr5(){
+            var str="The Quick Brown Fox "
+            var len=str.length
+            // document.write(len)
+            var st=""
+            for(let i=0;i<len;i++){
+                if(str[i]===str[i].toUpperCase()){
+                    var st=st+str[i].toLowerCase()
+                }
+                else if(str[i]===str[i].toLowerCase()){
+                    var st=st+str[i].toUpperCase()
+                }
+            }
+            document.write(st)
+        }
+
+    
+
+
+</script>
+</body>
+</html>

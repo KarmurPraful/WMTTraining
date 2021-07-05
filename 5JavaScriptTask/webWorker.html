@@ -16,7 +16,7 @@
         var btn1=document.getElementById('btn1')
         btn1.addEventListener('click',()=>{
             if(typeof(workerobj)=="undefined"){
-            workerobj=new Worker(worker1.js);
+            workerobj=new Worker("worker1.js");
             }
             // workerobj.postMessage("start worker")
             workerobj.onmessage=(e)=>{
@@ -27,7 +27,7 @@
 
         var btn2=document.getElementById('btn2')
         btn2.addEventListener('click',()=>{
-            document.write("hi1")
+            document.write("hi")
         })
     </script>
 </body>
