@@ -18,18 +18,26 @@
     <h1>jQuery Event Property</h1>
 
     <div id="box">
+        <a id="result" href="https://www.google.com/search?q=w3schools+html&oq=w&aqs=chrome.1.69i60j69i59j0i131i433j69i60j69i61j69i60l3.2148j0j1&sourceid=chrome&ie=UTF-8">W3school html(prevent default)</a>
+        <br>
+        <a href="https://www.w3schools.com/java/">w3School java</a>
         <h2>This is a Box</h2>
         <p>this is a paragraph you can write your code hear
             this is a paragraph you can write your code hear
             this is a paragraph you can write your code hear
             this is a paragraph you can write your code hear</p>
-            <button>Button</button>
+        <p>this is seconde</p>
+        <button id="btn">Button</button>
+
     </div>
     <input type="text" name="" id="inputbox">
-    <h2></h2>
+    <h2 id="h2"></h2>
     <button id="Eeventtype" >Event Type</button>
     <button id="mousedown">mousedown</button>
     <button id="eventTarget">eventTarget</button>
+    <button id="preventdefault">preventdefault</button>
+    <button id="stoppropogaton">stoppropogaton</button>
+    <button id="eventdata">eventdata</button>
     <script>
         $(document).ready(function(){
             $("#Eeventtype").click(function(){
@@ -54,13 +62,45 @@
             // event target property
             //  ->it show to where you click loke (h1, p, button,etc..)
             $("#eventTarget").click(function(){
-                $('#box').on("mousedown mouseover mouseout",(event)=>{
-                    $("h2").html("Event:"+event.which)
+                $('#box').on("mouseover",(event)=>{
+                    $("#h2").html("Event:"+event.target.nodeName+" tag")
                 })   
-                $('#inputbox').on("keydown ",(event)=>{
-                    $("h2").html("Event:"+event.which)
+                $('#inputbox').on("keydown mouseover ",(event)=>{
+                    $("#h2").html("Event:"+event.target.nodeName)
                 })             
             })
+
+            // event preventDefault
+            // it stop the default opning link
+            $("#preventdefault").click(function(){
+                $("#result").click(function(){
+                 event.preventDefault()
+                })
+            })
+
+            // stroPropogation
+            //  ->id stop the propogation like onclick
+            $("#stoppropogaton").click(function(){
+                $("#box").click(()=>{
+                    alert("div clicked")
+                })
+                $("#btn").click((event)=>{
+                    event.stopPropagation()
+                    alert("btn clicked")
+                    console.log(event.isPropagationStopped())
+                })
+            })           
+
+            // evenData
+            $("#eventdata").click(function(){
+                $("p").each(function(i){
+                    $(this).on("click",{value:i},function(event){
+                        alert(event.data.value)
+
+                    })
+                })
+            })
+
 
 
         })
