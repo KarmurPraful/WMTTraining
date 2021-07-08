@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>Container</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap.js"></script>
+    <style>
+        .container{
+            border: 3px solid black;
+           
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="row border">
+            <p>
+                <a href="#collapse3div"  class="btn btn-primary mt-2 py-2" data-bs-toggle="collapse">collapse1</a>
+            </p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="collapse" id="collapse3div">
+                        <div class="card card-body bg-primary">
+                            some text hear for cillapse
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+                <a href="#collapse1div"  class="btn btn-primary mt-2 py-2" data-bs-toggle="collapse">collapse1</a>
+                <button class="btn btn-info mt-2 py-2" data-bs-toggle="collapse" data-bs-target="#collapse2div">collapse2</button>
+                <button class="btn btn-primary  mt-2 py-2" data-bs-toggle="collapse" data-bs-target=".bothcollapse">bothcollapse</button>
+            </p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="collapse bothcollapse" id="collapse1div">
+                        <div class="card card-body">
+                            some text hear for cillapse
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="collapse bothcollapse fade" id="collapse2div">
+                        <div class="card card-body">
+                            some text hear for cillapse
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

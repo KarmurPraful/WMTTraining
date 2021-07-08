@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>dropdown</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap.js"></script> -->
+    <style>
+        .container{
+            border: 3px solid black;
+           
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+        .nav{
+            background-color: darkcyan;
+        }
+        .nav-link{
+            color: white;
+        }
+        .nav-link:hover,
+        .nav-link.active{
+            color: white;
+            background-color: sandybrown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4 ">
+        <h6 class="m-0"> offcanvas from starting</h6>
+        <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#firstoff">Click me</button>
+    </div>
+    <div class="offcanvas offcanvas-start" id="firstoff">
+        <div class="card">
+            <div class="card-header">
+                this is header
+            </div>
+            <div class="card-body">
+                this is a body and we writing our all code hear
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4 ">
+        <h6 class="m-0"> offcanvas from top</h6>
+        <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#firstoff1">Click me</button>
+    </div>
+    <div class="offcanvas offcanvas-top" id="firstoff1">
+        <div class="card">
+            <div class="card-header">
+                this is header
+            </div>
+            <div class="card-body">
+                this is a body and we writing our all code hear
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4 ">
+        <h6 class="m-0"> offcanvas from end</h6>
+        <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#firstoff2">Click me</button>
+    </div>
+    <div class="offcanvas offcanvas-end" id="firstoff2">
+        <div class="card">
+            <div class="card-header">
+                this is header
+            </div>
+            <div class="card-body">
+                this is a body and we writing our all code hear
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4 ">
+        <h6 class="m-0"> offcanvas from buttom</h6>
+        <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#firstoff3">Click me</button>
+    </div>
+    <div class="offcanvas offcanvas-buttom" id="firstoff3">
+        <div class="card">
+            <div class="card-header">
+                this is header
+            </div>
+            <div class="card-body">
+                this is a body and we writing our all code hear
+            </div>
+        </div>
+    </div>
+</body>
+</html>

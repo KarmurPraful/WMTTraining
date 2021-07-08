@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>Container</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        .container{
+            border: 3px solid black;
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+        .row{
+            border: 2px solid red;
+        }
+        .col,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
+            border: 2px solid green;
+        }
+        .pink{
+            background-color: pink;
+        }
+        .blue{
+            background-color: rgb(50, 50, 213);
+            color: white;
+        }
+        .orange{
+            background-color:orange;
+        }
+        .green{
+            background-color: green;
+        }
+        .nested{
+            border: 1px solid black;
+        }
+        .white{
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- container
+        row row is used for horrizontal
+        col
+     -->
+     <div class="container-fluid">Container
+        <div class="row">
+            <div class="col-md orange order-md-last" >col 1</div>
+            <div class="col-md pink" >col 2</div>
+            <div class="col-md blue order-md-first" >col 3</div>
+            <div class="col-md green" >col 4</div>
+        </div>
+    </div>
+    <br>
+    <h3>Reordring using rid number</h3>
+    <div class="container">Container
+        <div class="row">
+            <div class="col-md orange order-md-1" >col 1</div>
+            <div class="col-md pink order-md-3" >col 2</div>
+            <div class="col-md blue order-md-0" >col 3</div>
+            <div class="col-md green order-md-2" >col 4</div>
+        </div>
+    </div>
+    <br><br>
+    <h3>Nesting column</h3>
+    <div class="container">Container
+        <div class="row">
+            <div class="col-md-8 pink" >
+                <div class="row">
+                    <h2>heading hear</h2>
+                    <div class="col-md-6 nested">nested 1 col
+                        <p>I had never seen a house on fire before, so, one evening when I heard fire engines with loud alarm bells rushing past my house. I quickly ran out and, a few streets away, joined a large crowd of people. We could see the fire only from a distance because the police would not allow any one near the building on fire.</p>
+                    </div>
+                    <div class="col-md-6 nested">nested 2 col
+                        <div class="row">
+                            <div class="col-md-3 green ">hello</div>
+                            <div class="col-md-9 white"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" >col 2</div>
+
+            
+        </div>
+    </div>
+
+
+</body>
+</html>

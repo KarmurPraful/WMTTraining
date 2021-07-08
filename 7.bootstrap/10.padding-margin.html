@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>Container</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        .container{
+            border: 3px solid black;
+           
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+        .row{
+            border: 2px solid red;
+        }
+        .col,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
+            border: 2px solid green;
+        }
+        .pink{
+            background-color: pink;
+        }
+        .blue{
+            background-color: rgb(50, 50, 213);
+            color: white;
+        }
+        .orange{
+            background-color:orange;
+        }
+        .green{
+            background-color: green;
+        }
+        .border1{
+            border: 1px solid black;
+        }
+        .white{
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container clearfix " style="height: 200px;">
+        <div class="row">
+            <div class="col-md border1 green py-3">col A</div>
+            <div class="col-md border1 orange mx-3">col B</div>
+            <div class="col-md border1 pink g-0">col C</div>
+        </div>
+        <ul>
+            <li>mx-*(margin x axis)</li>
+            <li>my-*(margin y axis)</li>
+            <li>px-*(padding x axis )</li>
+            <li>py-*(padding y axis)</li>
+            <li>gutters</li>
+        </ul>
+    </div>
+    <div class="container clearfix " style="height: 200px;">
+        <div class="row">
+            <div class="col-md border1 green my-3 py-2">col A</div>
+            <div class="col-md border1 orange py-md-4 g-md-0">col B</div>
+            <div class="col border1 pink">col C</div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

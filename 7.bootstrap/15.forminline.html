@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>Container</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        .container{
+            border: 3px solid black;
+           
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <h2 class="py-3 text-center">Bootstrap Form</h2>
+        <div class="row py-3">
+            <div class="col-md-6">
+                <div class="form-check form-check-inline">
+                   <input type="checkbox" class="form-check-input" id="one" checked>
+                   <label for="one" class="form-check-label">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="two">
+                    <label for="two" class="form-check-label">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="three" disabled>
+                    <label for="three" class="form-check-label">3(disabled)</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="one" checked>
+                    <label for="one" class="form-check-label">1</label>
+                 </div>
+                 <div class="form-check form-check-inline">
+                     <input type="radio" class="form-check-input" id="two">
+                     <label for="two" class="form-check-label">2</label>
+                 </div>
+                 <div class="form-check form-check-inline">
+                     <input type="radio" class="form-check-input" id="three" disabled>
+                     <label for="three" class="form-check-label">3(disabled)</label>
+                 </div>
+                
+            </div>
+        </div>
+        <hr>
+        <h2 class="py-3 ">input-group</h2>
+        <div class="row ">
+            <div class="col-md-6 ">
+                <div class="input-group mb-3">
+                    <label for="" class="input-group-text">fname_lname</label>
+                    <input type="name" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control">
+                    <label for="" class="input-group-text">..@Gmail.com</label>
+                </div>
+                <label for="url">your web url</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">https://example.com/users/</span>
+                    <input type="text" class="form-control" name="" id="url">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="text" class="form-control" name="" id="url">
+                    <span class="input-group-text">.00</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="" id="url" placeholder="username">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" name="" id="url" placeholder="username">
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <p class="py-3 ">input-group size</p>
+                <div class="input-group input-group-lg  mb-3">
+                    <label for="" class="input-group-text">fname_lname</label>
+                    <input type="name" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <label for="" class="input-group-text">fname_lname</label>
+                    <input type="name" class="form-control">
+                </div>
+                <div class="input-group input-group-sm  mb-3">
+                    <label for="" class="input-group-text">fname_lname</label>
+                    <input type="name" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                        <input class="form-check-input" type="checkbox" name="" id="">
+                    </div>
+                    <input type="text" name="" id="" class="form-control">
+                </div>
+
+                <div class="input-group input-group-sm  mb-3">
+                    <label for="fname" class="input-group-text">fname_lname</label>
+                    <input type="name" id=fname class="form-control">
+                    <input type="name" id=fname class="form-control">
+                </div>
+
+                
+            </div>
+        </div>
+        
+        <hr>
+        <h2 class="py-3 ">form-flotig</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="text" id="flotin" class="form-control"  placeholder="email">
+                    <label for="flotin">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" id="flotin1" class="form-control"  placeholder="password">
+                    <label for="flotin1">Password</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="email" id="flotin" class="form-control is-invalid"  placeholder="email">
+                    <label for="flotin">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="your comment" class="form-control"></textarea>
+                    <label for="flotin">your comment</label>
+                </div>
+                <div class="form-floating mb-3">
+                   <select name="" id="" class="form-select">
+                       <option value="1">one</option>
+                       <option value="2">two</option>
+                       <option value="3">three</option>
+                   </select>
+                    <label for="flotin">your comment</label>
+                </div>
+            </div>
+            
+        </div>
+        
+
+    </div>   
+
+</body>
+</html>

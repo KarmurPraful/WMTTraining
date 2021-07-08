@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>Container</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        .container{
+            border: 8px solid black;
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+        .row{
+            border: 2px solid red;
+        }
+        .col,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
+            border: 2px solid green;
+        }
+
+        #header{
+            background-color: orange;
+            padding: 10px 0 10px 10px;
+        }
+        #menu{
+            background-color: pink;  
+            padding: 3px 0;          
+        }
+        #content{
+            background-color: wheat;
+        }
+        #sidebar{
+            background-color: lightblue;
+        }
+        #footer{
+            background-color: orange;
+        }
+
+        #menu ul{
+            list-style: none;
+            margin: 0;
+        }
+        #menu ul li{
+            
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- container
+        row row is used for horrizontal
+        col
+     -->
+     <div class="container">Container</div>
+     <br>
+     <div class="container-fluid">
+         <div class="row">
+             <div class="col">Col 1</div>
+             <div class="col">Col 2</div>
+             <div class="w-100"></div>  
+             <div class="col">Col 3</div>
+             <div class="col">Col 4</div>
+             <div class="col">Col 5</div>
+             <div class="col">Col 6</div>
+             <div class="col">Col 7</div>
+             <div class="w-100"></div> 
+             <div class="col">Col 8</div>
+             <div class="col">Col 9</div>
+         </div>
+         <div class="row">Row2</div>
+         <div class="row">Row3</div>
+     </div>
+
+     <br>
+     <h3>row-col class (row-col-3)</h3>
+     <div class="container-fluid">
+        <div class="row row-cols-3">
+            <div class="col">Col 1</div>
+            <div class="col">Col 2</div>
+            <div class="col">Col 3</div>
+            <div class="col">Col 4</div>
+            <div class="col">Col 5</div>
+            <div class="col">Col 6</div>
+            <div class="col">Col 7</div>            
+            <div class="col">Col 8</div>
+            <div class="col">Col 9</div>
+        </div>
+        <div class="row">Row2</div>
+        <div class="row">Row3</div>
+     </div>
+     <br>
+     <h3>col-md class</h3>
+     <div class="container-fluid">
+         <div class="row">
+            <div class="col-md">col 1</div> 
+            <div class="col-md">col 2</div> 
+            <div class="col-md">col 3</div> 
+         </div>
+         <div class="row">row 2</div>           
+     </div>
+
+     <br>
+     <h3>col-1 to col-12 class</h3>
+     <div class="container-fluid">
+        <div class="row">
+           <div class="col-6">col 1</div> 
+           <div class="col-3">col 2</div> 
+           <div class="col-3">col 3</div> 
+        </div>
+        <div class="row">
+            <div class="col-5">col 1</div> 
+            <div class="col-4">col 2</div> 
+        </div>           
+    </div>
+
+    <h1>Basic web design</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col" id="header">Website Name</div>
+        </div>
+
+        <div class="row">
+            <div class="col" id="menu"><ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Gallary</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Contact</a></li>
+            </ul> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3" id="sidebar"><ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Gallary</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Contact</a></li>
+            </ul> 
+            </div>
+
+            <div class="col-md-6" id="content">
+                <h2>Sub Heading</h2>
+                <p>I had never seen a house on fire before, 
+                    so, one evening when I heard fire 
+                    engines with loud alarm bells rushing past my house.
+                    I quickly ran out and, a few streets away, 
+                    joined a large crowd of people. We could see 
+                    the fire only from a distance because the police 
+                    would not allow any one near the building on fire.
+
+                    I had never seen a house on fire before, 
+                    so, one evening when I heard fire 
+                    engines with loud alarm bells rushing past my house.
+                    I quickly ran out and, a few streets away, 
+                    joined a large crowd of people. We could see 
+                    the fire only from a distance because the police 
+                    would not allow any one near the building on fire.
+                    I had never seen a house on fire before, 
+                    so, one evening when I heard fire 
+                    engines with loud alarm bells rushing past my house.
+                    I quickly ran out and, a few streets away, 
+                    joined a large crowd of people. We could see 
+                    the fire only from a distance because the police 
+                    would not allow any one near the building on fire.
+                    I had never seen a house on fire before, 
+                    so, one evening when I heard fire 
+                    engines with loud alarm bells rushing past my house.
+                    I quickly ran out and, a few streets away, 
+                    joined a large crowd of people. We could see 
+                    the fire only from a distance because the police 
+                    would not allow any one near the building on fire.
+                    I had never seen a house on fire before, 
+                    so, one evening when I heard fire 
+                    engines with loud alarm bells rushing past my house.
+                    I quickly ran out and, a few streets away, 
+                    joined a large crowd of people. We could see 
+                    the fire only from a distance because the police 
+                    would not allow any one near the building on fire.
+                </p>
+            </div>
+
+            <div class="col-md-3" id="sidebar"><ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Gallary</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Contact</a></li>
+            </ul> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" id="footer">@copyright 22</div>
+        </div>
+
+    </div>
+ 
+
+</body>
+</html>

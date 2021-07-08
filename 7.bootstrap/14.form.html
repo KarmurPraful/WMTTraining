@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>Container</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        .container{
+            border: 3px solid black;
+           
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <h2 class="py-3 text-center">Bootstrap Form</h2>
+        <div class="row py-3">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">name</label>
+                    <input type="text" name="" id="" class="form-control form-control-lg" placeholder="form-control-lg"  >
+                    <input type="text" name="" id="" class="form-control form-control" placeholder="form-control default"  >
+                    <input type="text" name="" id="" class="form-control form-control-sm" placeholder="form-control-sm"  >
+                </div>
+                <div class="form-group">
+                    <label for="">EMAIL</label>
+                    <input type="email" name="" id="" class="form-control-plaintext" placeholder="email"  readonly>
+                </div>
+                <div class="form-group">
+                    <label for="">password</label>
+                    <input type="password" name="" id="" class="form-control">
+                    <small class="form-text text-muted">
+                        your password must be 8-20 characters long
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="">Country</label>
+                   <select name="" id="" class="form-select form-select-sm">
+                       <option value="">India</option>
+                       <option value="">pakistan</option>
+                       <option value="">banglades</option>
+                       <option value="">nepal</option>
+                   </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Message</label>
+                    <textarea  class="form-control"></textarea> 
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div><label for="" >File upload </label></div>
+                    <input type="file" class="form-control-file">
+                </div>
+
+                <div class="form-group">
+                    <div><label for="">range</label></div>
+                    <input type="range" name="" id="" class="form-control-range" placeholder="email"  readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="">checkbox</label>
+                    <div class="form-check">
+                        <input type="checkbox" id="music" class="form-check-input" checked>
+                        <label for="music" class="form-check-label">Music</label>
+                    </div>    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="read">
+                        <label class="form-check-label" for="read">
+                          reading
+                        </label>
+                    </div>  
+                    <div class="form-check">
+                        <input type="checkbox" id="book" class="form-check-input">
+                        <label for="book" class="form-check-label">Books</label>
+                    </div>             
+                </div>
+
+
+                <div class="form-group">
+                    <label for="">gender</label>
+                    <div class="form-check">
+                        <input type="radio" id="music" class="form-check-input" name="radiobtn">
+                        <label for="music" class="form-check-label">Music</label>
+                    </div>    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="" id="read" name="radiobtn">
+                        <label class="form-check-label" for="read">
+                          reading
+                        </label>
+                    </div>  
+                    <div class="form-check">
+                        <input type="radio" id="book" class="form-check-input" name="radiobtn">
+                        <label for="book" class="form-check-label">Books</label>
+                    </div>             
+                </div>
+
+
+                <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="sw1">
+                    <label for="sw1" class="form-check-label">switch checkbox input</label>
+
+
+                </div>
+                <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="sw2" checked>
+                    <label for="sw2" class="form-check-label">checked switch checkbox input</label>
+
+                </div>
+                <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="sw3" disabled>
+                    <label for="sw3" class="form-check-label">disabled switch checkbox input</label>
+
+                </div>
+                <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="sw4" disabled checked>
+                    <label for="sw4" class="form-check-label">disabled checked switch checkbox input</label> 
+                </div>
+
+            </div>
+        </div>
+    </div>   
+
+</body>
+</html>
