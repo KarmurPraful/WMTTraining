@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>dropdown</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="jquery-3.6.0.min.js"></script>
+   
+    
+    <style>
+        .container{
+            border: 3px solid black;
+           
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+        .nav{
+            background-color: darkcyan;
+        }
+    </style>
+    <script>
+            $(document).ready(function(){
+                $('[data-bs-toggle="popover"]').popover()
+            })
+            $(document).ready(function(){
+                $('[data-bs-toggle="tooltip"]').tooltip()
+            })
+    </script>
+</head>
+<body>
+    <div class="container mb-5 ">
+
+                <button class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#myModel">model open</button>
+                <div class="modal fade " data-bs-backdrop="static"  tabindex="-1" id="myModel">
+                    <div class="modal-dialog modal-dialog-scrollable h-50">
+                        <div class="modal-content ">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Model title</h5>
+                                <button class="close" data-bs-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                             
+                                In this tutorial you will learn bootstrap modal classes 
+                                and plugin tutorial in Hindi, Urdu.You can learn how to 
+                                use bootstrap modal dialog box with jQuery plugin 
+                                tutorial in hindi.            In this tutorial you will learn bootstrap modal classes 
+                                and plugin tutorial in Hindi, Urdu.You can learn how to 
+                                use bootstrap modal dialog box with jQuery plugin 
+                                tutorial in hindi.            In this tutorial you will learn bootstrap modal classes 
+                                and plugin tutorial in Hindi, Urdu.You can learn how to 
+                                use bootstrap modal dialog box with jQuery plugin 
+                                tutorial in hindi.            In this tutorial you will learn bootstrap modal classes 
+                                and plugin tutorial in Hindi, Urdu.You can learn how to 
+                                use bootstrap modal dialog box with jQuery plugin 
+                                tutorial in hindi.
+                                <h5>poopover in Model</h5>
+                                <p>This <a href="#" role="button" class="btn btn-secondary " data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+                                <p>This <a href="#" role="button"  data-bs-toggle="tooltip" title="Popover title" >first tooltip</a> triggers <a href="#" role="button"  data-bs-toggle="tooltip" title="Popover title2" >seconde tooltip</a></p>                           
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-bs-dismiss="modal">close</button>
+                                <button class="btn btn-success" >save</button>
+                                <button class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#myModel1" data-bs-dismiss="modal">model open</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade " data-bs-backdrop="static"  tabindex="-1" id="myModel1">
+                    <div class="modal-dialog modal-sm modal-dialog-scrollable h-50">
+                        <div class="modal-content ">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Model1 title</h5>
+                                <button class="close" data-bs-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                             
+                                <img src="/Images/computer-laptop.svg" alt="" style="width: 150px; height: auto;">
+                                tutorial in hindi.            In this tutorial you will learn bootstrap modal classes 
+                                and plugin tutorial in Hindi, Urdu.You can learn how to 
+                                use bootstrap modal dialog box with jQuery plugin 
+                                tutorial in hindi.
+                                <h5>poopover in Model</h5>
+                                <p>This <a href="#" role="button" class="btn btn-secondary " data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+                                <p>This <a href="#" role="button"  data-bs-toggle="tooltip" title="Popover title" >first tooltip</a> triggers <a href="#" role="button"  data-bs-toggle="tooltip" title="Popover title2" >seconde tooltip</a></p>                           
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-bs-dismiss="modal">close</button>
+                                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModel" data-bs-dismiss="modal">back to first</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>dropdown</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+    <script src="jquery-3.6.0.min.js"></script>
+
+
+
+    <style>
+        .container{
+            border: 3px solid black;
+           
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+
+
+    </style>
+
+</head>
+<body data-spy="scroll" data-bs-target="">
+   
+        <nav id="nav1" class="navbar navbar-light bg-light fixed-top"  >
+            <a href="" class="navbar-brand">WebMob</a>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="#fr1" class="nav-link">First</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#fr2" class="nav-link">seconde</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a href="#fr3" class="nav-link">third</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#fr4" class="nav-link">Forth</a>
+                        </li>            
+                        <li><hr class="dropdown-divider"></li>    
+                        <li class="nav-item">
+                            <a href="fr5" class="nav-link">five</a>
+                        </li>
+  
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div data-bs-spy="scroll" data-bs-target="#nav1" data-bs-offset="0" class="scrollspy-example ms-3" tabindex="0" style="position: relative;">
+
+            <h4 id="fr1">first heading</h4>
+            <p>
+                This is some placeholder content for the scrollspy page. 
+                Note that as you scroll down the page, the appropriate 
+                navigation link is highlighted. It's repeated throughout the 
+                component example. We keep adding some more example copy here to 
+                emphasize the scrolling and highlighting.
+                This is some placeholder content for the scrollspy page. 
+                Note that as you scroll down the page, the appropriate 
+                navigation link is highlighted. It's repeated throughout the 
+                component example. We keep adding some more example copy here to 
+                emphasize the scrolling and highlighting. 
+            </p>
+            <h4 id="fr2">seconde heading</h4>
+            <p>
+                This is some placeholder content for the scrollspy page. 
+                Note that as you scroll down the page, the appropriate 
+                navigation link is highlighted. It's repeated throughout the 
+                component example. We keep adding some more example copy here to 
+                emphasize the scrolling and highlighting.
+                This is some placeholder content for the scrollspy page. 
+                Note that as you scroll down the page, the appropriate 
+                navigation link is highlighted. It's repeated throughout the 
+                component example. We keep adding some more example copy here to 
+                emphasize the scrolling and highlighting. 
+            </p>
+            <h4 id="fr3">third heading</h4>
+            <p>
+                This is some placeholder content for the scrollspy page. 
+                Note that as you scroll down the page, the appropriate 
+                navigation link is highlighted. It's repeated throughout the 
+                component example. We keep adding some more example copy here to 
+                emphasize the scrolling and highlighting.
+                This is some placeholder content for the scrollspy page. 
+                Note that as you scroll down the page, the appropriate 
+                navigation link is highlighted. It's repeated throughout the 
+                component example. We keep adding some more example copy here to 
+                emphasize the scrolling and highlighting. 
+            </p>
+            <h4 id="fr4">forth heading</h4>
+            <p>
+                This is some placeholder content for the scrollspy page. 
+                Note that as you scroll down the page, the appropriate 
+                navigation link is highlighted. It's repeated throughout the 
+                component example. We keep adding some more example copy here to 
+                emphasize the scrolling and highlighting.
+                This is some placeholder content for the scrollspy page. 
+                Note that as you scroll down the page, the appropriate 
+                navigation link is highlighted. It's repeated throughout the 
+                component example. We keep adding some more example copy here to 
+                emphasize the scrolling and highlighting. 
+            </p>
+            <h4 id="fr5">fifth heading</h4>
+            <p>
+                This is some placeholder content for the scrollspy page. 
+                Note that as you scroll down the page, the appropriate 
+                navigation link is highlighted. It's repeated throughout the 
+                component example. We keep adding some more example copy here to 
+                emphasize the scrolling and highlighting.
+                This is some placeholder content for the scrollspy page. 
+                Note that as you scroll down the page, the appropriate 
+                navigation link is highlighted. It's repeated throughout the 
+                component example. We keep adding some more example copy here to 
+                emphasize the scrolling and highlighting.
+            </p>
+        </div>
+    
+</body>
+</html> 

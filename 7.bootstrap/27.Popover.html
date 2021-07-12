@@ -26,7 +26,36 @@
     </style>
         <script>
             $(document).ready(function(){
-                $('[data-bs-toggle="popover"]').popover()
+                $('[data-bs-toggle="popover"]').popover({
+                    html : true,
+                    title:"Popover Title",
+                    content:"this is popover content",
+                    
+                })
+                $("#showbtn").click(function(){
+                    $('[data-bs-toggle="popover"]').popover('show')
+                })
+                $("#hidebtn").click(function(){
+                    $('[data-bs-toggle="popover"]').popover('hide')
+                })
+                $("#toggle").click(function(){
+                    $('[data-bs-toggle="popover"]').popover('toggle')
+                })
+                $('[data-bs-toggle="popover"]').on("show.bs.popover",function(){
+                    alert("show");                 
+                })
+                $('[data-bs-toggle="popover"]').on("shown.bs.popover",function(){
+                    alert("shown");                 
+                })
+                $('[data-bs-toggle="popover"]').on("hide.bs.popover",function(){
+                    alert("hide");                 
+                })
+                $('[data-bs-toggle="popover"]').on("hidden.bs.popover",function(){
+                    alert("hidden");                 
+                })
+                $('[data-bs-toggle="popover"]').on("inserted.bs.popover",function(){
+                    alert("Inserted");                 
+                })
             })
         </script>
 </head>
@@ -34,7 +63,17 @@
     <div class="container mb-5 ">
         <div class="row py-5">
             <div class="col-md-7 mx-auto">
-                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+                <a  class="btn btn-lg btn-danger"   data-bs-toggle="popover" data-bs-content="And here's some amazing content. It's very engaging. Right?" data-bs-placement="left">Dismissible popover</a>
+                <button class="btn btn-primary" data-bs-toggle="popover" data-bs-content="this ids a popover content " data-bs-placement="left" >Popover btn</button>
+                <button id="showbtn" class="btn btn-danger">
+                    Show
+                </button>
+                <button id="hidebtn" class="btn btn-danger">
+                    hide
+                </button>
+                <button id="toggle" class="btn btn-danger">
+                    toggle
+                </button>
             </button>
             </div>
         </div>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>dropdown</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap.js"></script> -->
+    <style>
+
+        .container-fluid{
+            border: 2px solid black;
+        }
+        .header{
+            background: url("/carousel/carousel3.jpg");
+            background-size: cover;
+        }
+        .container3{
+            background-color:rgb(236, 243, 248);
+        }
+        .svg1{
+            width: 90px;
+            height: auto;
+            background-color: rgb(187, 214, 231);
+            border: 0px;
+            border-radius: 50%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container mb-5">
+            <div class="row mb-5">
+                <div class="col">
+                    <div class="navbar navbar-expand-lg navbar-light bg-transparent">
+                        <a class="navbar-brand font-wait text-white" href="#"><h1>SPACES</h1></a>
+                        <ul class="nav me-auto">
+                            <li class="nav-item ">
+                              <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item ">
+                              <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item ">
+                              <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item ">
+                              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                          </ul>
+                          <form class="d-flex ">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                          </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row " >
+                <div class="col">
+                    <h1 class="text-center text-light">
+                        Find Your perfect <b>coworking space.</b>
+                    </h1>
+                    <p class="text-center text-light">12000+ coworking spaces with desks,offices & meeting rooms in 165+ countries.</p>
+                    <p class="text-center text-light">Discover and reverse space today</p>
+                </div>
+            </div>
+            <div class="row m-0 my-3 g-4 mx-3 bg-light ">
+                <div class="col my-3">
+                  <input type="text" class="form-control" placeholder="First name" aria-label="Search location">
+                </div>
+                <div class="col my-3">
+                  <input type="text" class="form-control" placeholder="Select date" aria-label="Last name">
+                </div>
+                <div class="col my-3">
+                    <button class="btn btn-primary form-control">Find a desk</button>
+                </div>
+            </div>               
+      
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row mt-5">
+            <div class="col-md-3 d-flex">
+                <div class="div  flex-column mx-auto ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="90" height="70" fill="currentColor" class="bi bi-clock-fill  text-primary align-items-center m-3  justify-content-center" viewBox="0 0 14 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    </svg>
+
+                    <p class="text-center">24 Hr Access</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex">
+                <div class="div  flex-column mx-auto ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="90" height="70" fill="currentColor" class="bi bi-clock-fill  text-primary align-items-center m-3  justify-content-center" viewBox="2 0 14 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+                        <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+                    </svg>
+                    <p class="text-center">24 Hr Access</p>
+                </div>
+            </div>
+          
+            <div class="col-md-3">
+                
+            </div>
+            <div class="col-md-3">
+                
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-md">
+                <h1>Explore our <b>available</b> office spaces</h1>
+            </div>
+            <div class="col-md offset-md-1">
+                <p>Coworking is not only about the physical place.
+                but abut establishing the coworking community 
+                first its benefits can already be experienced 
+                outside of it's place, and it is recommended <br><br>
+                To start with bulding a coworking community first before considering opening a corworking place
+                </p>
+            </div>
+            <div class="col-md offset-md-1">
+                <p>However ,some coworking place don't bulid a community:they just get a part 
+                    of an existing one by combining their opning with
+                    <br><br>
+                    an event which attracts their 
+                    target group.Real-estate centric 
+                    coworking space are about selling desks first ,with buliding 
+                    community as a secondy as a secondygoal
+                </p>
+            </div>
+        </div>
+
+        <div class="progres bg-light ">
+            <div class="container border">
+                <div class="mt-4">
+                    <p class="d-inline-block">Space occupancy level</p>
+                    <p class="d-inline-block float-end">85%</p>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="row  my-5">
+                    <div class="col-md-6">
+                        <h1>Book your tour experirnce today</h1>
+                        <p>Schedule a tour,make an appointment to rent space 
+                            at themesberg,or ask for more information.
+                        </p>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center ">
+                        <button class="btn btn-primary ms-auto">Schedule a tour</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <p>Top cities</p>
+        </div>
+        <div class="row my-5">
+            <div class="col-md-3 h-100">
+                <div class="card bg-dark text-white">
+                    <img class="card-img" src="/Images/lyimg1.jpg" alt="Example">
+                    <div class="card-img-overlay d-flex">
+                      <p class="align-self-center mx-auto">NEW YOURK</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 h-100">
+                <div class="card bg-dark text-white">
+                    <img class="card-img" src="/Images/lyimg2.jpg" alt="Example">
+                    <div class="card-img-overlay d-flex">
+                      <p class="align-self-center mx-auto">PARISH</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 h-100">
+                <div class="card bg-dark text-white">
+                    <img class="card-img" src="/Images/lyimg3.jpg" alt="Example">
+                    <div class="card-img-overlay d-flex">
+                      <p class="align-self-center mx-auto">LONDON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 h-100">
+                <div class="card bg-dark text-white">
+                    <img class="card-img" src="/Images/lyimg4.jpg" alt="Example">
+                    <div class="card-img-overlay d-flex">
+                      <p class="align-self-center mx-auto">TOKYO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row my-5">
+            <div class="card-group gap-5">
+                <div class="card me-auto" style="width: 18rem;">
+                    <img src="/Images/lyimg1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Collaborative Workspace</h5>
+                      <p class="card-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 2 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                        </svg>New York,Manhattan,USA</p>
+                      <div class="row">
+                            <div class="col">
+                                Monthly <br>
+                                <b>2100$</b>
+                            </div>
+                            <div class="col">
+                              people <br>
+                              <b>12</b>
+                            </div>
+                            <div class="col">
+                                sq.ft <br>
+                                <b>1200</b>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="/Images/lyimg2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Coworking Workspace</h5>
+                        <p class="card-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 2 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            Bucharest, Sector 2,Remania</p>
+                        <div class="row">
+                              <div class="col">
+                                  Monthly <br>
+                                  <b>300$</b>
+                              </div>
+                              <div class="col">
+                                people <br>
+                                <b>24</b>
+                              </div>
+                              <div class="col">
+                                  sq.ft <br>
+                                  <b>3000</b>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card ms-auto" style="width: 18rem;">
+                    <img src="/Images/lyimg3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Meeting Office Space</h5>
+                        <p class="card-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 2 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            London,Canary Wharf, UK</p>
+                        <div class="row">
+                              <div class="col">
+                                  Monthly <br>
+                                  <b>50$</b>
+                              </div>
+                              <div class="col">
+                                people <br>
+                                <b>3-5</b>
+                              </div>
+                              <div class="col">
+                                  sq.ft <br>
+                                  <b>400</b>
+                              </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+
+
+        <div class="row my-5">
+            <div class="card-group gap-5">
+                <div class="card me-auto" style="width: 18rem;">
+                    <img src="/Images/lyimg1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Conference Room </h5>
+                      <p class="card-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 2 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                        </svg>  
+                        New York,Manhattan,USA</p>
+                      <div class="row">
+                            <div class="col">
+                                Monthly <br>
+                                <b>100$</b>
+                            </div>
+                            <div class="col">
+                              people <br>
+                              <b>2-20</b>
+                            </div>
+                            <div class="col">
+                                sq.ft <br>
+                                <b>200</b>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="/Images/lyimg2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lifestyle Space</h5>
+                        <p class="card-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 2 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            Bucharest, Sector 2,Remania</p>
+                        <div class="row">
+                              <div class="col">
+                                  Monthly <br>
+                                  <b>350$</b>
+                              </div>
+                              <div class="col">
+                                people <br>
+                                <b>10-25</b>
+                              </div>
+                              <div class="col">
+                                  sq.ft <br>
+                                  <b>100</b>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card ms-auto" style="width: 18rem;">
+                    <img src="/Images/lyimg3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">private Space</h5>
+                        <p class="card-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 2 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            London,Canary Wharf, UK</p>
+                        <div class="row">
+                              <div class="col">
+                                  Monthly <br>
+                                  <b>100$</b>
+                              </div>
+                              <div class="col">
+                                people <br>
+                                <b>1</b>
+                              </div>
+                              <div class="col">
+                                  sq.ft <br>
+                                  <b>10</b>
+                              </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <div class="row d-flex">
+            <div class="d-inline-flex flex-column align-items-center">
+                <button class="btn btn-primary ">Browse All</button>
+                <p class="">142 space in 6 countries</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container3">
+        <div class="container">
+            <div class="row d-flex mt-5">
+                <div class="d-inline-flex flex-column align-items-center">
+                    <h1>How <small class="display-5">it works?</small></h1>
+                    <p class="mb-0">All You need are the details and location, the types of </p>
+                    <p class="mt-0">space,pricing and some good quality photographs.</p>
+                </div>
+            </div>
+            <div class="row m-4">
+                <div class="d-inline-flex align-items-center justify-content-center">
+                    <div class="bg-white px-4 py-3  m-2 fw-bold text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="29" fill="currentColor" class="bi bi-building  mx-2" viewBox="0 3 15 15">
+                            <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+                            <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+                          </svg>
+                        Find your Space</div>
+                    <div class=" p-3 m-2">submit your space</div>
+                </div>
+            </div>
+
+
+            <div class="card-group gap-5  mb-5">
+                <div class="card d-flex p-2">
+                   
+                    <div class="card-body d-inline-flex  flex-column justify-content-center p-5">
+                        <div class="d-inline-flex  flex-column text-primary fw-bold justify-content-center mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" class="bi bi-search svg1" viewBox="-7 -7 30 30">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </div>
+                        <h5 class="m-auto pt-5">1.choose a workspace</h5>
+                        <p class="m-auto pt-3">it takes no longerthen 15 minutes to list your space 
+                           on themesberg .our user friendly onbording process
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card d-flex p-2">
+                    <div class="card-body d-inline-flex  flex-column justify-content-center p-5">
+                        <div class="d-inline-flex  flex-column text-primary fw-bold justify-content-center mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check svg1" viewBox="-7 -7 30 30">
+                                <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                            </svg>
+                        </div>
+                        <h5 class="m-auto pt-5 ">2.Schedule a tour </h5>
+                       <p class="m-auto pt-2">
+                           After you have uploaded your space-our website
+                           makes it eazy for you to keep the details up to date.
+                       </p>
+                    </div>
+                </div>
+
+                <div class="card d-flex p-2">
+                    <div class="card-body d-inline-flex  flex-column justify-content-center p-5">
+                        <div class="d-inline-flex  flex-column text-primary fw-bold justify-content-center mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-left-circle svg1" viewBox="-7 -7 30 30">
+                                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-5.904 2.803a.5.5 0 1 0 .707-.707L6.707 6h2.768a.5.5 0 1 0 0-1H5.5a.5.5 0 0 0-.5.5v3.975a.5.5 0 0 0 1 0V6.707l4.096 4.096z"/>
+                            </svg>
+                        </div>
+                       <h5 class="m-auto pt-5">3.Book your workspace</h5>
+                       <p class="m-auto pt-2">Order coming from themesberg are 100% prepaid. 
+                           we will bring you not just leads but new clients.
+
+                       </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="div d-flex justify-content-center">
+                <div class="bg-primary text-white p-2 px-3">find a location </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

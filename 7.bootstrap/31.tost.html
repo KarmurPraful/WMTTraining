@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>dropdown</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+    <script src="jquery-3.6.0.min.js"></script>
+
+
+
+    <style>
+        .container{
+            border: 3px solid black;
+           
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#showBtn").click(function(){
+                $("#toasts").toast('show')
+            })
+            $("#hidebtn").click(function(){
+                $("#toasts").toast('hide')
+            })
+            $("#toasts").on('show.bs.toast',()=>{
+                alert("show")
+            })
+            $("#toasts").on('hide.bs.toast',()=>{
+                alert("hide")
+            })
+        })
+    </script>
+
+</head>
+<body >
+    
+        <h2 class="py-3 text-center">Bootstrap tost</h2>
+        <div class="row">
+            <div class="col text-center">
+                <button id="showBtn" class="btn btn-primary ">Show</button>
+                <button id="hidebtn" class="btn btn-danger ">hide</button>
+            </div>
+        </div>
+    </div>    
+    
+    
+    <div class="toast " data-bs-delay="1000" id="toasts" style="position: absolute; top: 20px; left: 20px;">
+        <div class="toast-header">
+            <b class="me-auto">Bootstrap tost1</b>
+            <button class="btn btn-sm  py-0 me-2">
+                <div class="spinner-grow spinner-grow-sm text-success" role="status">
+                    
+                </div>
+                <span class="">Active</span>
+            </button>
+            <button class="close " data-bs-dismiss="toast">
+                <span>&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            this area is toast area body so we can write content hear
+        </div>
+
+</body>
+</html> 

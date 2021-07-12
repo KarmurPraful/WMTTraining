@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>dropdown</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+    <script src="jquery-3.6.0.min.js"></script>
+
+
+
+    <style>
+        .container{
+            border: 3px solid black;
+           
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+
+    </style>
+        <script>
+            $(document).ready(function(){
+                $('[data-bs-toggle="tooltip"]').tooltip({
+                    html : true,
+                    animation : false,
+                    delay:{'show':100},
+                    // title:"Popover Title",
+                    // trigger:"click"
+                    
+                })
+                $("#showbtn").click(function(){
+                    $('[data-bs-toggle="tooltip"]').tooltip('show')
+                })
+                $("#hidebtn").click(function(){
+                    $('[data-bs-toggle="tooltip"]').tooltip('hide')
+                })
+                $("#toggle").click(function(){
+                    $('[data-bs-toggle="tooltip"]').tooltip('toggle')
+                })
+                $("#dispose").click(function(){
+                    $('[data-bs-toggle="tooltip"]').tooltip('dispose')
+                })
+                $("#enable").click(function(){
+                    $('[data-bs-toggle="tooltip"]').tooltip('enable')
+                })
+                $("#disabled1").click(function(){
+                    $('[data-bs-toggle="tooltip"]').tooltip('disable')
+                })
+                $('[data-bs-toggle="tooltip"]').on("show.bs.tooltip",function(){
+                    alert("show1");                 
+                })
+                $('[data-bs-toggle="tooltip"]').on("shown.bs.tooltip",function(){
+                    alert("shown");                 
+                })
+                $('[data-bs-toggle="tooltip"]').on("hide.bs.tooltip",function(){
+                    alert("hide");                 
+                })
+                $('[data-bs-toggle="tooltip"]').on("hidden.bs.tooltip",function(){
+                    alert("hidden");                 
+                })
+                $('[data-bs-toggle="tooltip"]').on("inserted.bs.tooltip",function(){
+                    alert("Inserted");                 
+                })
+            })
+        </script>
+</head>
+<body>
+    <div class="container mb-5 ">
+        <div class="row py-5">
+            <div class="col-md-7 mx-auto">
+                <a  class="btn btn-lg btn-danger"   data-bs-toggle="tooltip" title="tooltip left" data-bs-placement="left">tooltip left</a>
+                <button class="btn btn-primary" data-bs-toggle="tooltip" title="tooltip bottom" data-bs-placement="bottom" >tooltip bottom</button>
+                <button class="btn btn-primary" data-bs-toggle="tooltip" title="tooltip top" data-bs-placement="top" >tooltip top</button>
+                <button id="showbtn" class="btn btn-danger">
+                    show
+                </button>
+                <button id="hidebtn" class="btn btn-danger">
+                    hide
+                </button>
+                <button id="toggle" class="btn btn-danger">
+                    toggle
+                </button>
+
+
+
+                
+                <button id="dispose" class="btn btn-danger">
+                    dispose
+                </button>
+                <button id="enable" class="btn btn-danger">
+                    enabled
+                </button>
+                <button id="disabled1" class="btn btn-danger">
+                    disabled
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html> 

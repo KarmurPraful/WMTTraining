@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>dropdown</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap.js"></script> -->
+    <style>
+        .container{
+            border: 3px solid black;
+           
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+        .nav{
+            background-color: darkcyan;
+        }
+        .nav-link{
+            color: white;
+        }
+        .nav-link:hover,
+        .nav-link.active{
+            color: white;
+            background-color: sandybrown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mb-5 ">
+        <div class="row">
+            <div class="col">
+                <div class="list-group list-group-flush list-group-numbered">
+                    <div class="list-group-item disabled">list-group item1</div>
+                    <div class="list-group-item active">list-group item2</div>
+                    <div class="list-group-item">list-group item3</div>
+                    <div class="list-group-item">list-group item4</div>
+                    <div class="list-group-item">list-group item5</div>
+            
+                </div>
+                <hr class="border border-danger">
+                <ul class="list-group list-group-flush list-group-numbered mt-2">
+                    <li class="list-group-item disabled">list-group item1</li>
+                    <li class="list-group-item active">list-group item2</li>
+                    <li class="list-group-item">list-group item3</li>
+                    <li class="list-group-item">list-group item4</li>
+                    <li class="list-group-item">list-group item5</li>
+                </ul>
+                <hr class="border border-danger">
+                <h4>list group horizontal</h4>
+                <ul class="list-group list-group-horizontal mt-2">
+                    <li class="list-group-item disabled">list-group item1</li>
+                    <li class="list-group-item active">list-group item2</li>
+                    <li class="list-group-item">list-group item3</li>
+                    <li class="list-group-item">list-group item4</li>
+                    <li class="list-group-item">list-group item5</li>
+                </ul>
+                <hr class="border border-danger">
+                <h4>list group clickable</h4>
+                <div class="list-group list-group-flush list-group-numbered">
+                    <a href="#" class="list-group-item list-group-action disabled">list-group item1</a>
+                    <a href="#" class="list-group-item list-group-action active">list-group item2</a>
+                    <a href="#" class="list-group-item list-group-action">list-group item3</a>
+                    <a href="#" class="list-group-item list-group-action">list-group item4</a>
+                    <a href="#" class="list-group-item list-group-action">list-group item5</a>
+            
+                </div>
+        </div>
+    </div>
+</body>
+</html>
