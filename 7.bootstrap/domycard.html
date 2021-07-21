@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>dropdown</title>
+  <link rel="stylesheet" href="/7.bootstrap/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .container{
+            border: 3px solid black;  
+            position: relative; 
+        }
+        .myinner{
+            height: 100%;
+            display: flex;         
+           
+        }
+
+        .container-fluid{
+            border: 2px solid black;
+        }
+        .carousel-indicators {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    padding: 0;
+    margin-right: 15%;
+
+    margin-left: 15%;
+  
+}
+
+        .carousel-indicators [data-bs-target] {
+          box-sizing: content-box;
+          flex: 0 1 auto;
+          width: 15px;
+          height: 15px;
+          padding: 0;
+          margin-right: 3px;
+          margin-left: 3px;
+          
+          cursor: pointer;
+          background-color: rgb(46, 17, 233);
+          
+          background-clip: padding-box;
+          border: 0;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-radius: 50%;
+          opacity: 0.5;
+          transition: opacity 0.6s ease;
+      }        
+      @media (prefers-reduced-motion: reduce) {
+        .carousel-indicators [data-bs-target] {
+        transition: none;
+        }
+      }
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+  
+
+        .carousel-indicators #id1:active{
+            width: 20px;
+            height: 20px;
+           
+            background-color: red;
+            
+        }
+        .carousel-control-prev{
+            position: relative;
+  
+            width: 30px;
+            margin-right: 10px;            
+            left: 0px;
+        }
+
+      
+        .carousel-control-next{
+            position: relative;
+  
+            width: 30px;
+            margin-left: 10px;            
+            left: 0px;
+        }
+        .item1{
+          height: 100%
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="myinner mt-5">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <div class="d-flex my-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="blue" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
+            </div>
+              </button>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+              
+
+              
+              <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                      <div class="item1">
+                        <div class="card-group mb-4 gap-3">
+   
+                      
+                            <div class="card ">
+                              <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                          
+                                <div class="card-img-overlay d-flex align-items-end">
+                                    <div class="row  ">
+                                        <div class="col text-center">
+                                          <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                          <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                          <div class="col " >
+                                              <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                          </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                          <div class="card">
+                              <div class="card-body">
+                                  <p class="m-0 mt-2 text-center">
+                                      "How to help your team excel at remote collaboration. Here are tips and tools we use on the content team 
+                                      at inVision to keep our remote collaboration game  strong. Trust is both a complex and nuanced topic.
+                                      itsvery nature makes it difficult to tackle through direct effort."
+                                  </p>
+                                  <p class="text-center fw-bold mt-2"> Keith Marggaret</p>
+                                  <div class="col d-flex justify-content-center" >
+                                      <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                  </div>
+                                  <div class="d-flex justify-content-center mt-3">
+                                      <a href="#" class="text-decoration-none fw-bold p-2 text-center" style="background: rgb(115, 156, 206);">Read More</a>
+                                  </div>                            
+                              </div>
+                          </div>
+                          <div class="card ">
+                              <img src="/Images/carimg1.jfif"  class="card-img h-100 w-100" alt="">
+                          
+                              <div class="card-img-overlay d-flex align-items-end">
+                                  <div class="row  ">
+                                      <div class="col text-center">
+                                          <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                          <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                          <div class="col " >
+                                              <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+      
+                        </div>
+                      </div>
+                    </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <div class="item1">
+                      <div class="card-group mb-4 gap-3">                    
+                        <div class="card ">
+                            <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                        
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="row  ">
+                                    <div class="col text-center">
+                                        <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                        <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                        <div class="col " >
+                                            <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="m-0 mt-2 text-center">
+                                    "How to help your team excel at remote collaboration. Here are tips and tools we use on the content team 
+                                    at inVision to keep our remote collaboration game  strong. Trust is both a complex and nuanced topic.
+                                    itsvery nature makes it difficult to tackle through direct effort."
+                                </p>
+                                <p class="text-center fw-bold mt-2"> Keith Marggaret</p>
+                                <div class="col d-flex justify-content-center" >
+                                    <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                </div>
+                                <div class="d-flex justify-content-center mt-3">
+                                    <a href="#" class="text-decoration-none fw-bold p-2 text-center" style="background: rgb(115, 156, 206);">Read More</a>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="/Images/carimg1.jfif"  class="card-img h-100 w-100" alt="">
+                        
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="row  ">
+                                    <div class="col text-center">
+                                        <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                        <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                        <div class="col " >
+                                            <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="item1">
+                      <div class="card-group mb-4 gap-3">                    
+                        <div class="card ">
+                            <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                        
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="row  ">
+                                    <div class="col text-center">
+                                        <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                        <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                        <div class="col " >
+                                            <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="m-0 mt-2 text-center">
+                                    "How to help your team excel at remote collaboration. Here are tips and tools we use on the content team 
+                                    at inVision to keep our remote collaboration game  strong. Trust is both a complex and nuanced topic.
+                                    itsvery nature makes it difficult to tackle through direct effort."
+                                </p>
+                                <p class="text-center fw-bold mt-2"> Keith Marggaret</p>
+                                <div class="col d-flex justify-content-center" >
+                                    <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                </div>
+                                <div class="d-flex justify-content-center mt-3">
+                                    <a href="#" class="text-decoration-none fw-bold p-2 text-center" style="background: rgb(115, 156, 206);">Read More</a>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <img src="/Images/carimg1.jfif"  class="card-img h-100 w-100" alt="">
+                        
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="row  ">
+                                    <div class="col text-center">
+                                        <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                        <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                        <div class="col " >
+                                            <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+                    </div>
+                    
+                  </div>
+                </div>
+          
+                <div class="carousel-indicators div1">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+              </div>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <div class="d-flex my-auto">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(115, 156, 206)" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                  </svg>
+              </div>
+              </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

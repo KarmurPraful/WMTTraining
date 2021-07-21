@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>dropdown</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+    <style>
+        .container{
+            border: 3px solid black;
+           
+        }
+        .container-fluid{
+            border: 2px solid black;
+        }
+        .nav{
+            background-color: darkcyan;
+        }
+        .nav-link{
+            color: white;
+        }
+        .nav-link:hover,
+        .nav-link.active{
+            color: white;
+            background-color: sandybrown;
+        }
+        .slick-dots li.slick-active button:before {
+            opacity: .75;
+            color: blue;
+        }
+        .slick-dots li button::before {
+            font-family: slick;
+            font-size: 22px;
+            line-height: -20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 18px;
+            height: 20px;
+            content: '•';
+            text-align: center;
+            opacity: .25;
+            color: blue;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slick-next:before {
+            content: '→';
+        }
+        .slick-next:before, .slick-prev:before {
+            font-family: slick;
+            font-size: 45px;
+            line-height: 1;
+            opacity: .75;
+            color: #F47;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+
+        .slick-next,.slick-arrow{
+            background-color: blue;
+            position: absolute;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row slider" >
+            <div class="col-md-12 ">
+                <div class="card ">
+                    <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                
+                      <div class="card-img-overlay d-flex align-items-end">
+                          <div class="row  ">
+                              <div class="col text-center">
+                                <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                <div class="col " >
+                                    <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                </div>
+                              </div>
+                          </div>
+                       </div>
+                  </div>
+                
+            </div>
+            <div class="col-md-12 ">
+                <div class="card ">
+                    <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                
+                      <div class="card-img-overlay d-flex align-items-end">
+                          <div class="row  ">
+                              <div class="col text-center">
+                                <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                <div class="col " >
+                                    <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                </div>
+                              </div>
+                          </div>
+                       </div>
+                  </div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="card ">
+                    <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                
+                      <div class="card-img-overlay d-flex align-items-end">
+                          <div class="row  ">
+                              <div class="col text-center">
+                                <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                <div class="col " >
+                                    <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                </div>
+                              </div>
+                          </div>
+                       </div>
+                  </div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="card ">
+                    <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                
+                      <div class="card-img-overlay d-flex align-items-end">
+                          <div class="row  ">
+                              <div class="col text-center">
+                                <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                <div class="col " >
+                                    <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                </div>
+                              </div>
+                          </div>
+                       </div>
+                  </div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="card ">
+                    <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                
+                      <div class="card-img-overlay d-flex align-items-end">
+                          <div class="row  ">
+                              <div class="col text-center">
+                                <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                <div class="col " >
+                                    <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                </div>
+                              </div>
+                          </div>
+                       </div>
+                  </div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="card ">
+                    <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                
+                      <div class="card-img-overlay d-flex align-items-end">
+                          <div class="row  ">
+                              <div class="col text-center">
+                                <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                <div class="col " >
+                                    <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                </div>
+                              </div>
+                          </div>
+                       </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script >
+        $('.slider').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+	
+    </script>
+</body>
+</html>

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>dropdown</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+
+
+
+    <style>
+
+
+        .ptx{
+            color: rgb(143, 150, 169);
+            font-size: 30px;
+        }
+        .ptx1{
+            color: rgb(143, 150, 169);
+            font-size: 23px;
+        }
+        @media only screen and (max-width: 576px) {
+            .conainer1{
+                background:linear-gradient(135deg,hsl(348,97%,63%,0.6),hsl(230,96%,62%,0.6) ),
+                url("/Images/layoutimg2.jfif") ;
+            }
+            .nav1{
+                display: none;
+            }
+        }
+        .container3{
+            background: white;
+        }
+        .container2{
+            background-color: rgb(244, 249, 255);
+            
+        }
+        .boy{
+            clip-path: circle();
+        }
+        .container4{
+            background-image: url("/carousel/carousel1.jpg");
+            background-size: cover;
+            background-attachment:local;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .cd1{
+                transform: translate(0px,20px);
+            }
+            .myinner{
+                margin-bottom: 70px;
+            
+            }
+            .nav2{
+                display: none;
+            }
+            .conainer1{
+            background-image: url("/Images/layoutimg2.jfif") ;
+            background: linear-gradient(to right,rgba(228, 211, 214, 0.2),rgba(109, 129, 226, 0.6)),url("/Images/layoutimg2.jfif");
+            background-position:right;
+            background-repeat: no-repeat;
+
+            padding: 10px;       
+           /* background-position-x:  right ;
+            background-position-y: top;
+            background-repeat; */
+ 
+           /* background-origin:padding-box;
+           background-size: 700px 100%;*/
+           
+            border-top-right-radius: 100% 50%; 
+            border-bottom-left-radius: 100% 100%; 
+            }
+
+        }
+
+        @media only screen and (max-width: 768px) {
+ 
+            .nav1{
+                display: none;
+            }
+            .nav2{
+                display: block;
+            }
+        }
+
+
+      
+        .container1{
+     
+            position: relative;           
+        }
+        .multiple-items{
+            position:static;
+
+            
+        }
+        .ds1{
+            padding: 10px;
+        }
+        
+        .slick-next, .slick-prev {
+            font-size: 0;
+            line-height: 0;
+            position: absolute;
+            top: 50%;
+            display: block;
+            width: 50px;
+            height: 50px;
+            padding: 0;
+            -webkit-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
+            transform: translate(0,-50%);
+            cursor: pointer;
+            color: red;
+            border: none;
+            outline: 0;
+            background: rgb(225, 230, 231);
+        }
+        .slick-prev{
+            
+            left: 0px;
+            z-index: 1;
+            
+            
+        }
+        .slick-next{
+            
+            right: 0;
+            z-index: 1;
+        }
+        .slick-next:before {
+            content: '→';
+        }
+        .slick-prev:before {
+            content: '←';
+        }
+
+        .slick-next:before, .slick-prev:before {
+            font-family: slick;
+            font-size: 30px;
+            width: 100%;
+            overflow: hidden;
+            line-height: 1;
+            opacity: 1;
+            color: rgb(203, 113, 113);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slick-dots {
+            position: relative;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+        }
+        .slick-dots li button:before {
+            font-family: slick;
+            font-size: 26px;
+            line-height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            content: '•';
+            text-align: center;
+            opacity: .25;
+            color: blue;
+            -webkit-font-smoothing: antialiased;
+        }
+        .slick-dots li.slick-active button:before {
+            opacity: .75;
+            color: blue;
+        }
+        .ds1,.cd2{
+            height: 450px;
+        }
+
+
+
+
+
+        
+    </style>
+
+
+</head>
+<body >
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav1">
+            <div class="container-fluid ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-flag-fill" viewBox="0 0 16 16">
+                                <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001"/>
+                              </svg>
+                         United State
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                    <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+                        <li class="nav-item px-1">
+                            <a class="nav-link active"  href="#">Help</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link active"  href="#">Contacts</a>
+                        </li>
+                        <li class="nav-item my-auto px-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </li>
+                        <li class="nav-item my-auto px-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                        </li>
+                        <li class="nav-item my-auto px-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg>
+                        </li>
+                    </ul>         
+                </div>
+            </div>
+          </nav>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid mt-0 py-2">
+                <a class="navbar-brand fw-bold text-primary fs-1" href="#">Front</a>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-3">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          home
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          page
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Shop
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Demos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Docs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <button class="btn btn-primary">Buy Now</button>
+                </ul>
+                <div class="container-fluid  nav2">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-flag-fill" viewBox="0 0 16 16">
+                                    <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001"/>
+                                  </svg>
+                             United State
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                       
+                        <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+                            <li class="nav-item px-1">
+                                <a class="nav-link active"  href="#">Help</a>
+                            </li>
+                            <li class="nav-item px-1">
+                                <a class="nav-link active"  href="#">Contacts</a>
+                            </li>
+                            <li class="nav-item my-auto px-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </li>
+                            <li class="nav-item my-auto px-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                            </li>
+                            <li class="nav-item my-auto px-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                </svg>
+                            </li>
+                        </ul>         
+
+                </div>
+                </div>
+            </div>
+          </nav>
+    </div>
+
+    <div class="conainer1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mt-5">
+                    <p class="" style="font-size: 70px;">
+                        Introducing Front
+                    </p>
+                    <p class="ptx p-0 m-0">
+                        Your company will look <span class="text-primary fw-bold">P</span><span class="text-primary">l</span>
+                    </p>
+                    <p class="ptx">
+                        Attract more visitors,and win more business with Front Template
+                    </p>
+                </div>
+            </div>
+            <div class="row " style="margin-bottom: 30px; margin-top: 30px; padding-bottom: 150px; ">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <button class="btn bg-info fs-2 fw-bold text-primary d-flex ">Get Started</button>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <a href="" class="text-decoration-none" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="rgb(82, 202, 166)" class="bi bi-play-circle-fill " viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                              </svg>
+                              <p class="d-inline text-dark " style="font-size: 25px;">Play Video</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-2 d-flex">
+                <div class="text-center  ms-auto" style="border: darkgray; border-radius: 50px; background: rgb(232, 250, 246); color: rgb(82, 202, 166); "><p class="m-0 p-0 px-4 py-1 ">What we do?</p></div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center">
+                <p class="display-4" >
+                    Front makes designing easy and performance fast
+                </p>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-4 my-4">
+                <div class="card bg-transparent  " style="border: 0px;" >
+                    <div class="card-body  ">
+                        <div class="card-title d-flex justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-stop-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.5 5A1.5 1.5 0 0 0 5 6.5v3A1.5 1.5 0 0 0 6.5 11h3A1.5 1.5 0 0 0 11 9.5v-3A1.5 1.5 0 0 0 9.5 5h-3z"/>
+                            </svg>
+                        </div>
+                        <div class="card-text d-flex justify-content-center">
+                            <h2 class=" ">Professional Design</h2>
+                        </div>
+                        <div class="card-text d-flex justify-content-center">
+                            <p class="ptx1 text-center">
+                                Attract more visitors,and win more business with Front Template
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-4">
+                <div class="card bg-transparent " style="border: 0px;" >
+                    <div class="card-body ">
+                        <div class="card-title d-flex justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-stop-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.5 5A1.5 1.5 0 0 0 5 6.5v3A1.5 1.5 0 0 0 6.5 11h3A1.5 1.5 0 0 0 11 9.5v-3A1.5 1.5 0 0 0 9.5 5h-3z"/>
+                            </svg>
+                        </div>
+                        <div class="card-text d-flex justify-content-center">
+                            <h2 class=" ">Front Strategy</h2>
+                        </div>
+                        <div class="card-text d-flex justify-content-center">
+                            <p class="ptx1 text-center">
+                                We strive to figure out ways to help 
+                                your business grow through all platforms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-4">
+                <div class="card bg-transparent " style="border: 0px;" >
+                    <div class="card-body ">
+                        <div class="card-title d-flex justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-stop-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.5 5A1.5 1.5 0 0 0 5 6.5v3A1.5 1.5 0 0 0 6.5 11h3A1.5 1.5 0 0 0 11 9.5v-3A1.5 1.5 0 0 0 9.5 5h-3z"/>
+                            </svg>
+                        </div>
+                        <div class="card-text d-flex justify-content-center">
+                            <h2 class=" ">Unlimited Power </h2>
+                        </div>
+                        <div class="card-text d-flex justify-content-center">
+                            <p class="ptx1 text-center">
+                                Find what you need in one template and combaine 
+                                features at will.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row d-flex justify-content-center " >
+            <div class="col-md-12 d-none d-md-block mt-5">
+                <img src="/Images/beetweenimg1.jpg" width="100%" height="300px" alt="">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center ">
+            <div class="col-md-6 text-center my-5">
+                <p class="p-0 m-0" style="font-size: 25px; "><b> It is fast and eazy. </b><span style="font-size: 25px;"> Create your first and ongoing website 
+                    with Front.</span>
+                <p>
+            </div>
+        </div>
+    </div>
+    <div class="container4">
+        <div class="container">
+            <img src="/Images/layoutimg2.jfif" class="my-5 mx-auyo" width="100%" height="90%" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6 " >
+                <div class="card" style="border: 0px;">
+                    <div class="card-body">
+                        <div class="mb-4 d-flex">
+                            <div class="text-center  me-auto" style="border: darkgray; border-radius: 50px; background: rgb(232, 250, 246); color: rgb(82, 202, 166); "><p class="m-0 p-0 px-4 py-1 ">Pricing plans</p></div>
+                        </div>
+                        <div class="card-text d-flex ">
+                            <p class="display-6">No additional costs. Pay for what you use.</p>
+                        </div>
+                        <div class="card-text d-flex mb-5">
+                            <p class="ptx1">
+                                Choose the most suitable service for your needs with resonable prise
+                            </p>
+                        </div>
+                        <div class="card-text">
+                            <div class="btn-group position-relative" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary px-4">monthly</button>
+                                <button type="button" class="btn btn btn-outline-secondary px-4 ">Yearly</button>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                                    <p class="p-0 m-0 py-1" style="font-size: 10px;">10% OFF</p>
+                                </span>
+
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                
+                <div class="card-group gap-3">
+                    <div class="card cd1">
+                        <img src="/Images/cardimg-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex mt-4">
+                            <div class="div d-flex justify-content-center mb-0 ">
+                                <div class="row d-flex justify-content-end">
+                                    <div class="col-1 text-white">$</div>
+                                </div>
+                                <div class="row d-flex flex-nowrap">
+                                    <div class="col-1"></div>
+                                    <h1 class="text-white m-0 p-0 ms-auto" style="font-size: 52px; ">22<p  class="d-inline-block ptx1 m-0 p-0">/month</p></h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text pb-0">
+                                <div class="py-2 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill " viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                      </svg>
+                                    <p class=" d-inline px-2">community support </p>
+                                </div>
+                                <div class="py-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                      </svg>
+                                      <p class=" d-inline px-2">400+</p>
+                                </div>
+                                <div class="py-2 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                      </svg>
+                                    <p class=" d-inline px-1">100+ header variations</p>
+                                </div>
+                                <div class="text-muted py-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                      </svg>
+                                    <p class="text-muted d-inline px-2">20+ home page options</p> 
+                                </div>
+                                <div class="d-flex mt-4" style="background: rgb(115, 156, 206);">
+                                    <a href="#" class="text-decoration-none fw-bold p-2 mx-auto">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <img src="/Images/cardimg-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-img-overlay d-flex mt-4">
+                            <div class="div d-flex justify-content-center mb-0 ">
+                                <div class="row d-flex justify-content-end">
+                                    <div class="col-1 text-white">$</div>
+                                </div>
+                                <div class="row d-flex flex-nowrap">
+                                    <div class="col-1"></div>
+                                    <h1 class="text-white m-0 p-0 ms-auto" style="font-size: 52px; ">99<p  class="d-inline-block ptx1 m-0 p-0">/month</p></h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <div class=" ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill " viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                      </svg>
+                                    <p class=" d-inline px-1">24/7 support</p>
+                                </div>
+                                <div class="py-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                      </svg>
+                                      <p class="py-2 d-inline px-1">400+ pages</p>
+                                </div>
+                                <div class="py-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                      </svg>
+                                    <p class="py-2 d-inline px-1">200+ header variations</p>
+                                </div>
+                                <div class="py-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                      </svg>
+                                    <p class="py-2 d-inline px-1">40+ home page options</p> 
+                                </div>
+                                <div class="py-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                      </svg>
+                                    <p class="py-2 d-inline px-1">E-commerce</p> 
+                                </div>
+                                <div class="d-flex mt-4" style="background: rgb(115, 156, 206);">
+                                    <a href="#" class="text-decoration-none fw-bold p-2 mx-auto">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mt-3">
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <p class="text-muted ">*<span class="text-unmuted" style="border-bottom: 1px dotted blue  ;">Terms</span>  are subject to change.</p>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+       
+    </div>
+
+    <div class="container2">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-4  ">
+                    <div class="row d-flex justify-content-center mt-5">
+                        <div class=" my-2 d-flex justify-content-center">
+                            <div class="text-center  " style="border: darkgray; border-radius: 50px; background: rgb(232, 250, 246); color: rgb(82, 202, 166); "><p class="m-0 p-0 px-4 py-1 ">What we do?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-7 text-center">
+                    <p class="p-0 m-0" style="font-size: 50px;">Read our latest news</p>
+                    <p class="">Our duty towards you is to share our experience we're reaching in our work path with you.</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="container">
+            <div class="container1">
+                <div class="multiple-items">
+                    <div class="ds1" >
+                        <div class="card cd2">
+                            <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                        
+                              <div class="card-img-overlay d-flex align-items-end">
+                                  <div class="row  ">
+                                      <div class="col text-center">
+                                        <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                        <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                        <div class="col " >
+                                            <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                        </div>
+                                      </div>
+                                  </div>
+                               </div>
+                          </div>
+                    </div>
+                    <div class="ds1 " >
+                        <div class="card cd2">
+                            <div class="card-body">
+                                <p class="m-0 mt-2 text-center">
+                                    "How to help your team excel at remote collaboration. Here are tips and tools we use on the content team 
+                                    at inVision to keep our remote collaboration game  strong. Trust is both a complex and nuanced topic.
+                                    itsvery nature makes it difficult to tackle through direct effort."
+                                </p>
+                                <p class="text-center fw-bold mt-2"> Keith Marggaret</p>
+                                <div class="col d-flex justify-content-center" >
+                                    <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                </div>
+                                <div class="d-flex justify-content-center mt-3">
+                                    <a href="#" class="text-decoration-none fw-bold p-2 text-center" style="background: rgb(115, 156, 206);">Read More</a>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ds1">
+                        <div class="card cd2">
+                            <img src="/Images/carimg1.jfif"  class="card-img h-100 w-100" alt="">
+                        
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="row  ">
+                                    <div class="col text-center">
+                                        <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                        <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                        <div class="col " >
+                                            <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ds1">
+                        <div class="card cd2">
+                            <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                        
+                              <div class="card-img-overlay d-flex align-items-end">
+                                  <div class="row  ">
+                                      <div class="col text-center">
+                                        <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                        <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                        <div class="col " >
+                                            <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                        </div>
+                                      </div>
+                                  </div>
+                               </div>
+                          </div>
+                    </div>
+                    <div class="ds1">
+                        <div class="card cd2">
+                            <div class="card-body">
+                                <p class="m-0 mt-2 text-center">
+                                    "How to help your team excel at remote collaboration. Here are tips and tools we use on the content team 
+                                    at inVision to keep our remote collaboration game  strong. Trust is both a complex and nuanced topic.
+                                    itsvery nature makes it difficult to tackle through direct effort."
+                                </p>
+                                <p class="text-center fw-bold mt-2"> Keith Marggaret</p>
+                                <div class="col d-flex justify-content-center" >
+                                    <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                </div>
+                                <div class="d-flex justify-content-center mt-3">
+                                    <a href="#" class="text-decoration-none fw-bold p-2 text-center" style="background: rgb(115, 156, 206);">Read More</a>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ds1">
+                        <div class="card cd2">
+                            <img src="/Images/carimg1.jfif"  class="card-img h-100 w-100" alt="">
+                        
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="row  ">
+                                    <div class="col text-center">
+                                        <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                        <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                        <div class="col " >
+                                            <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ds1">
+                        <div class="card cd2">
+                            <img src="/Images/cardimg-3.jpg"  class="card-img h-100 w-100" alt="">
+                        
+                              <div class="card-img-overlay d-flex align-items-end">
+                                  <div class="row  ">
+                                      <div class="col text-center">
+                                        <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                        <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                        <div class="col " >
+                                            <img src="/Images/lyimg1.jpg" class="boy imgs1" style="width: 100px;" alt="">
+                                        </div>
+                                      </div>
+                                  </div>
+                               </div>
+                          </div>
+                    </div>
+                    <div class="ds1">
+                        <div class="card cd2">
+                            <div class="card-body">
+                                <p class="m-0 mt-2 text-center">
+                                    "How to help your team excel at remote collaboration. Here are tips and tools we use on the content team 
+                                    at inVision to keep our remote collaboration game  strong. Trust is both a complex and nuanced topic.
+                                    itsvery nature makes it difficult to tackle through direct effort."
+                                </p>
+                                <p class="text-center fw-bold mt-2"> Keith Marggaret</p>
+                                <div class="col d-flex justify-content-center" >
+                                    <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                </div>
+                                <div class="d-flex justify-content-center mt-3">
+                                    <a href="#" class="text-decoration-none fw-bold p-2 text-center" style="background: rgb(115, 156, 206);">Read More</a>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ds1">
+                        <div class="card cd2">
+                            <img src="/Images/carimg1.jfif"  class="card-img h-100 w-100" alt="">
+                        
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="row  ">
+                                    <div class="col text-center">
+                                        <h4 class="text-danger text-center m-0 p-0 ">How to make trust your competitive advantage</h4>
+                                        <p class="ptx1 text-center p-0 m-0 mt-2 ">Neyton Burchie</p>
+                                        <div class="col " >
+                                            <img src="/Images/carimg1.jfif" class="boy imgs1" style="width: 100px;" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    <div class="container3">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-4 mt-3">
+                            <p class="p-0 m-0 py-2 mt-3"><b>About</b></p>
+                            <a href="" class="d-block py-2 text-decoration-none text-muted">About</a>
+                            <a href="" class="d-block py-2 text-decoration-none text-muted">Services</a>
+                            <a href="" class="d-block py-2 text-decoration-none text-muted">Careers</a>
+                        </div>
+                        <div class="col-4 mt-3 ">
+                            <p class="p-0 m-0 py-2 mt-3"><b>Account</b></p>
+                            <a href="" class="d-block py-2 text-decoration-none text-muted">Account</a>
+                            <a href="" class="d-block py-2 text-decoration-none text-muted">My tasks</a>
+                        </div>
+                       
+                        <div class="col-4 mt-3">
+                            <p class="p-0 m-0 py-2 mt-3"><b>Resources</b></p>
+                            <a href="" class="d-block py-2 text-decoration-none text-muted">Help</a>
+                            <a href="" class="d-block py-2 text-decoration-none text-muted">Terms</a>
+                            <a href="" class="d-block py-2 text-decoration-none text-muted">Privacy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <p class="p-0 m-0 py-2 mt-3"><b>we are driven to deliver result for all your businesses.</b></p>
+                    
+                    <div class="row d-flex mx-auto">
+                        <div class="col-6 ">
+                            <div class="d-flex ">
+                                <img src="/logo/appstore.jfif" class="w-100" alt="">
+                            </div>
+
+                        </div>
+                        <div class="col-6" >
+                            <div class="d-flex ">
+                                <img src="/logo/googleplay.png" class="w-100" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 p-0 m-0">
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col-md-6 mt-3 text-center">
+                    <img src="/logo/front.jfif" class="my-auto text-center mb-3" width="6%" height="auto" alt="">
+                    <a class="navbar-brand fw-bold text-primary fs-1 my-auto" href="#">Front</a><br>
+                    <p class="text-muted p-0  m-0"> © 2019 Neon.all right reserved</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script >
+    $(document).ready(function(){
+        $('.multiple-items').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay:true,
+            autoplaySpeed:3000,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  infinite: true,
+                  dots: true,
+                  autoplay:true,
+                  autoplaySpeed:100
+                }
+              },
+              {
+                breakpoint: 769,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  autoplay:true,
+                  autoplaySpeed:3000
+                }
+              },
+              {
+                breakpoint: 576,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ]
+        });
+    })
+	
+    </script>
+    
+</body>
+</html>  
