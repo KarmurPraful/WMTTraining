@@ -36,54 +36,48 @@
             .nav1{
                 display: none;
             }
+            .mybt{
+                display: flex;
+                justify-content: center;                
+            }
+            .img1{
+                display: none;
+            }
         }
         .container3{
             background: white;
         }
         .container2{
-            background-color: rgb(244, 249, 255);
-            
+            background-color: rgb(244, 249, 255);    
         }
         .boy{
             clip-path: circle();
         }
         .container4{
-            background-image: url("/carousel/carousel1.jpg");
-            background-size: cover;
-            background-attachment:local;
+            
+            background-image: url("/Images/layoutimg2.jfif") ;
+            background: linear-gradient(to right,rgba(228, 211, 214, 0.2),rgba(109, 129, 226, 0.6)),url("/Images/layoutimg2.jfif");
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size: 80%;
+            padding: 10px;                 
+            border-top-left-radius: 40% 100%; 
+            border-bottom-right-radius: 100% 40%;            
         }
-
+        .myimg{
+            opacity: 1;
+        }
         @media only screen and (min-width: 576px) {
             .cd1{
                 transform: translate(0px,20px);
             }
             .myinner{
-                margin-bottom: 70px;
-            
+                margin-bottom: 70px;  
             }
             .nav2{
                 display: none;
             }
-            .conainer1{
-            background-image: url("/Images/layoutimg2.jfif") ;
-            background: linear-gradient(to right,rgba(228, 211, 214, 0.2),rgba(109, 129, 226, 0.6)),url("/Images/layoutimg2.jfif");
-            background-position:right;
-            background-repeat: no-repeat;
-
-            padding: 10px;       
-           /* background-position-x:  right ;
-            background-position-y: top;
-            background-repeat; */
- 
-           /* background-origin:padding-box;
-           background-size: 700px 100%;*/
-           
-            border-top-right-radius: 100% 50%; 
-            border-bottom-left-radius: 100% 100%; 
-            }
-
         }
-
         @media only screen and (max-width: 768px) {
  
             .nav1{
@@ -92,23 +86,18 @@
             .nav2{
                 display: block;
             }
-        }
-
-
-      
+   
+        }      
         .container1{
      
             position: relative;           
         }
         .multiple-items{
-            position:static;
-
-            
+            position:static;    
         }
         .ds1{
             padding: 10px;
         }
-        
         .slick-next, .slick-prev {
             font-size: 0;
             line-height: 0;
@@ -130,12 +119,9 @@
         .slick-prev{
             
             left: 0px;
-            z-index: 1;
-            
-            
+            z-index: 1;            
         }
-        .slick-next{
-            
+        .slick-next{   
             right: 0;
             z-index: 1;
         }
@@ -145,7 +131,6 @@
         .slick-prev:before {
             content: '←';
         }
-
         .slick-next:before, .slick-prev:before {
             font-family: slick;
             font-size: 30px;
@@ -188,16 +173,8 @@
         }
         .ds1,.cd2{
             height: 450px;
-        }
-
-
-
-
-
-        
+        }        
     </style>
-
-
 </head>
 <body >
     
@@ -359,49 +336,54 @@
                                 </svg>
                             </li>
                         </ul>         
-
-                </div>
+                    </div>
                 </div>
             </div>
-          </nav>
+        </nav>
     </div>
-
     <div class="conainer1">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 mt-5">
-                    <p class="" style="font-size: 70px;">
-                        Introducing Front
-                    </p>
-                    <p class="ptx p-0 m-0">
-                        Your company will look <span class="text-primary fw-bold">P</span><span class="text-primary">l</span>
-                    </p>
-                    <p class="ptx">
-                        Attract more visitors,and win more business with Front Template
-                    </p>
-                </div>
-            </div>
-            <div class="row " style="margin-bottom: 30px; margin-top: 30px; padding-bottom: 150px; ">
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-6 ">
-                            <button class="btn bg-info fs-2 fw-bold text-primary d-flex ">Get Started</button>
+                        <div class="col mt-5">
+                            <p class="" style="font-size: 70px;">
+                                Introducing Front
+                            </p>
+                            <p class="ptx p-0 m-0">
+                                Your company will look <span class="text-primary fw-bold">P</span><span class="text-primary">l</span>
+                            </p>
+                            <p class="ptx">
+                                Attract more visitors,and win more business with Front Template
+                            </p>
                         </div>
-                        <div class="col-md-6 d-flex align-items-center">
-                            <a href="" class="text-decoration-none" >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="rgb(82, 202, 166)" class="bi bi-play-circle-fill " viewBox="0 0 16 16">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
-                              </svg>
-                              <p class="d-inline text-dark " style="font-size: 25px;">Play Video</p>
-                            </a>
+                    </div>
+                    <div class="row " >
+                        <div class="col " style="margin-bottom: 30px; margin-top: 30px; padding-bottom: 150px; ">
+                            <div class="row">
+                                <div class="col-md-6 mb-3 mybt">
+                                    <button class="btn bg-info fs-2 fw-bold text-primary d-flex ">Get Started</button>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center mybt">
+                                    <a href="" class="text-decoration-none" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="rgb(82, 202, 166)" class="bi bi-play-circle-fill " viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                      </svg>
+                                      <p class="d-inline text-dark " style="font-size: 25px;">Play Video</p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="" style="height: 100%; width: 100%;">
+                        <img src="/Images/cardimg-3.jpg" alt="" class="img1" style="height: 100%; width: 100%; border-bottom-left-radius: 30%; border-bottom-right-radius: 100%; border-top-left-radius: 100%;border-top-right-radius:10%;">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-2 d-flex">
@@ -492,8 +474,8 @@
         </div>
     </div>
     <div class="container4">
-        <div class="container">
-            <img src="/Images/layoutimg2.jfif" class="my-5 mx-auyo" width="100%" height="90%" alt="">
+        <div class="container d-flex">
+            <img src="/Images/layoutimg2.jfif" class="my-5 mx-auto myimg" width="70%" height="90%" alt="">
         </div>
     </div>
     <div class="container">
@@ -526,101 +508,103 @@
                 </div>
             </div>
             <div class="col-md-6">
-                
-                <div class="card-group gap-3">
-                    <div class="card cd1">
-                        <img src="/Images/cardimg-1.jpg" class="card-img-top" alt="...">
-                        <div class="card-img-overlay d-flex mt-4">
-                            <div class="div d-flex justify-content-center mb-0 ">
-                                <div class="row d-flex justify-content-end">
-                                    <div class="col-1 text-white">$</div>
-                                </div>
-                                <div class="row d-flex flex-nowrap">
-                                    <div class="col-1"></div>
-                                    <h1 class="text-white m-0 p-0 ms-auto" style="font-size: 52px; ">22<p  class="d-inline-block ptx1 m-0 p-0">/month</p></h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card cd1">
+                            <img src="/Images/cardimg-1.jpg" height="150px" width="auto" class="card-img-top" alt="...">
+                            <div class="card-img-overlay d-flex mt-4">
+                                <div class="div d-flex justify-content-center mb-0 ">
+                                    <div class="row d-flex justify-content-end">
+                                        <div class="col-1 text-white">$</div>
+                                    </div>
+                                    <div class="row d-flex flex-nowrap ">
+                                        <div class="col-1"></div>
+                                        <h2 class="text-white m-0 p-0 ms-auto" style="font-size: 52px; ">22<p  class="d-inline-block ptx1 m-0 p-0">/month</p></h2>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-text pb-0">
-                                <div class="py-2 ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill " viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                      </svg>
-                                    <p class=" d-inline px-2">community support </p>
-                                </div>
-                                <div class="py-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                      </svg>
-                                      <p class=" d-inline px-2">400+</p>
-                                </div>
-                                <div class="py-2 ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                      </svg>
-                                    <p class=" d-inline px-1">100+ header variations</p>
-                                </div>
-                                <div class="text-muted py-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                      </svg>
-                                    <p class="text-muted d-inline px-2">20+ home page options</p> 
-                                </div>
-                                <div class="d-flex mt-4" style="background: rgb(115, 156, 206);">
-                                    <a href="#" class="text-decoration-none fw-bold p-2 mx-auto">Get Started</a>
+                            <div class="card-body ">
+                                <div class="card-text pb-0">
+                                    <div class="py-2 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill " viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                          </svg>
+                                        <p class=" d-inline px-2">community support </p>
+                                    </div>
+                                    <div class="py-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                          </svg>
+                                          <p class=" d-inline px-2">400+</p>
+                                    </div>
+                                    <div class="py-2 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                          </svg>
+                                        <p class=" d-inline px-1">100+ header variations</p>
+                                    </div>
+                                    <div class="text-muted py-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                          </svg>
+                                        <p class="text-muted d-inline px-2">20+ home page options</p> 
+                                    </div>
+                                    <div class="d-flex mt-4" style="background: rgb(115, 156, 206);">
+                                        <a href="#" class="text-decoration-none fw-bold p-2 mx-auto">Get Started</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                
-                    <div class="card">
-                        <img src="/Images/cardimg-1.jpg" class="card-img-top" alt="...">
-                        <div class="card-img-overlay d-flex mt-4">
-                            <div class="div d-flex justify-content-center mb-0 ">
-                                <div class="row d-flex justify-content-end">
-                                    <div class="col-1 text-white">$</div>
-                                </div>
-                                <div class="row d-flex flex-nowrap">
-                                    <div class="col-1"></div>
-                                    <h1 class="text-white m-0 p-0 ms-auto" style="font-size: 52px; ">99<p  class="d-inline-block ptx1 m-0 p-0">/month</p></h1>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="/Images/cardimg-1.jpg"  height="150px" width="auto" class="card-img-top" alt="...">
+                            <div class="card-img-overlay d-flex mt-4">
+                                <div class="div d-flex justify-content-center mb-0 ">
+                                    <div class="row d-flex justify-content-end">
+                                        <div class="col-1 text-white">$</div>
+                                    </div>
+                                    <div class="row d-flex flex-nowrap">
+                                        <div class="col-1"></div>
+                                        <h1 class="text-white m-0 p-0 ms-auto" style="font-size: 52px; ">99<p  class="d-inline-block ptx1 m-0 p-0">/month</p></h1>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-text">
-                                <div class=" ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill " viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                      </svg>
-                                    <p class=" d-inline px-1">24/7 support</p>
-                                </div>
-                                <div class="py-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                      </svg>
-                                      <p class="py-2 d-inline px-1">400+ pages</p>
-                                </div>
-                                <div class="py-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                      </svg>
-                                    <p class="py-2 d-inline px-1">200+ header variations</p>
-                                </div>
-                                <div class="py-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                      </svg>
-                                    <p class="py-2 d-inline px-1">40+ home page options</p> 
-                                </div>
-                                <div class="py-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                      </svg>
-                                    <p class="py-2 d-inline px-1">E-commerce</p> 
-                                </div>
-                                <div class="d-flex mt-4" style="background: rgb(115, 156, 206);">
-                                    <a href="#" class="text-decoration-none fw-bold p-2 mx-auto">Get Started</a>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <div class=" ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill " viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                          </svg>
+                                        <p class=" d-inline px-1">24/7 support</p>
+                                    </div>
+                                    <div class="py-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                          </svg>
+                                          <p class="py-2 d-inline px-1">400+ pages</p>
+                                    </div>
+                                    <div class="py-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                          </svg>
+                                        <p class="py-2 d-inline px-1">200+ header variations</p>
+                                    </div>
+                                    <div class="py-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                          </svg>
+                                        <p class="py-2 d-inline px-1">40+ home page options</p> 
+                                    </div>
+                                    <div class="py-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" fill="rgb(115, 156, 206)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                          </svg>
+                                        <p class="py-2 d-inline px-1">E-commerce</p> 
+                                    </div>
+                                    <div class="d-flex mt-4" style="background: rgb(115, 156, 206);">
+                                        <a href="#" class="text-decoration-none fw-bold p-2 mx-auto">Get Started</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -632,11 +616,8 @@
                     </div>
                 </div>                
             </div>
-        </div>
-
-       
+        </div>   
     </div>
-
     <div class="container2">
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -649,15 +630,12 @@
                     </div>
                 </div>
             </div>
-        
             <div class="row d-flex justify-content-center">
                 <div class="col-md-7 text-center">
                     <p class="p-0 m-0" style="font-size: 50px;">Read our latest news</p>
                     <p class="">Our duty towards you is to share our experience we're reaching in our work path with you.</p>
                 </div>
             </div>
-
-
         </div>
         <div class="container">
             <div class="container1">
@@ -847,7 +825,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mt-3">
-                    <p class="p-0 m-0 py-2 mt-3"><b>we are driven to deliver result for all your businesses.</b></p>
+                    <p class="p-0 m-0 py-2 mt-3"><span class="fw-bold">we are driven to deliver result for all your businesses.</span></p>
                     
                     <div class="row d-flex mx-auto">
                         <div class="col-6 ">
